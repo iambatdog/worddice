@@ -99,6 +99,87 @@ function createIconNode(icon, opts={}){
   const id = icon && icon.id;
   const label = icon && icon.label ? icon.label : '';
   try{
+    // If this is a synthetic placeholder, try to find a matching real icon and render it on a colored band background
+    if(id && id.startsWith('placeholder-')){
+      // determine band from id (placeholder-<band>-...)
+      const bandMatch = id.match(/^placeholder-([a-z0-9]+)-/);
+      const band = bandMatch ? bandMatch[1] : 'k2';
+      const BAND_PALETTES = {
+        k2: { bg:'#fffaf0', stripe:'#ffd8b3', chip:'#ffe7d6', stroke:'#ffd8b3', text:'#333' },
+        g35: { bg:'#f0fbff', stripe:'#bfefff', chip:'#dff6ff', stroke:'#bfefff', text:'#113344' },
+        g68: { bg:'#fff7fb', stripe:'#ffd1f0', chip:'#ffe7f5', stroke:'#ffd1f0', text:'#3c1033' },
+        g912: { bg:'#f3f7ff', stripe:'#cfe0ff', chip:'#e8f0ff', stroke:'#cfe0ff', text:'#102240' }
+      };
+      const palette = BAND_PALETTES[band] || BAND_PALETTES.k2;
+      // try exact label match first, then try token-level matching
+      const key = normalizeLabel(label);
+      let matchedId = ICON_LABEL_MAP[key];
+      if(!matchedId){
+        const parts = key.split(/\s+/).filter(Boolean);
+        // try longer phrases first
+        for(let len = parts.length; len>0 && !matchedId; len--){
+          for(let i=0;i+len<=parts.length;i++){
+            const phrase = parts.slice(i,i+len).join(' ');
+            if(ICON_LABEL_MAP[phrase]){ matchedId = ICON_LABEL_MAP[phrase]; break; }
+          }
+        }
+      }
+      if(matchedId){
+        const matchedEntry = RASTER_MANIFEST && RASTER_MANIFEST[matchedId];
+        // build wrapper with background color to match the template look
+        const wrapper = document.createElement('div');
+        wrapper.style.display = 'inline-flex';
+        wrapper.style.alignItems = 'center';
+        wrapper.style.justifyContent = 'center';
+        wrapper.style.width = (opts.size ? opts.size+'px' : '96px');
+        wrapper.style.height = (opts.size ? opts.size+'px' : '96px');
+        wrapper.style.borderRadius = '12px';
+        wrapper.style.background = palette.bg;
+        wrapper.style.border = `6px solid ${palette.stroke}`;
+        wrapper.style.boxSizing = 'border-box';
+
+        if(matchedEntry && (matchedEntry.webp || matchedEntry.png)){
+          const pic = document.createElement('picture');
+          if(matchedEntry.webp){
+            const srcsetWebp = matchedEntry.webp.map(it=>`${it.path} ${it.width}w`).join(', ');
+            const sWebp = document.createElement('source');
+            sWebp.type = 'image/webp'; sWebp.srcset = srcsetWebp; pic.appendChild(sWebp);
+          }
+          if(matchedEntry.png){
+            const srcsetPng = matchedEntry.png.map(it=>`${it.path} ${it.width}w`).join(', ');
+            const sPng = document.createElement('source');
+            sPng.type = 'image/png'; sPng.srcset = srcsetPng; pic.appendChild(sPng);
+          }
+          const img = document.createElement('img');
+          // prefer png entry if present else webp first
+          if(matchedEntry.png && matchedEntry.png.length) img.src = matchedEntry.png[matchedEntry.png.length-1].path;
+          else if(matchedEntry.webp && matchedEntry.webp.length) img.src = matchedEntry.webp[matchedEntry.webp.length-1].path;
+          img.alt = label; img.loading='lazy'; img.decoding='async'; img.style.width='80%'; img.style.height='80%'; img.style.objectFit='contain';
+          pic.appendChild(img);
+          wrapper.appendChild(pic);
+          return wrapper;
+        } else {
+          // fallback to existing svg file for matched id
+          const matchedIcon = ICONS.find(ic=>ic.id === matchedId);
+          if(matchedIcon && matchedIcon.src){
+            const img = document.createElement('img');
+            img.src = matchedIcon.src; img.alt = matchedIcon.label; img.loading='lazy'; img.decoding='async';
+            img.style.width='80%'; img.style.height='80%'; img.style.objectFit='contain';
+            wrapper.appendChild(img);
+            return wrapper;
+          }
+        }
+      }
+      // if no match found, fall back to using any raster entry directly for this placeholder id
+      const entry = id && RASTER_MANIFEST && RASTER_MANIFEST[id];
+      if(entry && (entry.webp || entry.png)){
+        const picture = document.createElement('picture');
+        if(entry.webp){ const srcsetWebp = entry.webp.map(it=>`${it.path} ${it.width}w`).join(', '); const sWebp = document.createElement('source'); sWebp.type='image/webp'; sWebp.srcset = srcsetWebp; picture.appendChild(sWebp); }
+        if(entry.png){ const srcsetPng = entry.png.map(it=>`${it.path} ${it.width}w`).join(', '); const sPng = document.createElement('source'); sPng.type='image/png'; sPng.srcset = srcsetPng; picture.appendChild(sPng); }
+        const img = document.createElement('img'); if(entry.png && entry.png.length) img.src = entry.png[0].path; else if(entry.webp && entry.webp.length) img.src = entry.webp[0].path; img.alt = label; img.loading='lazy'; img.decoding='async'; return picture;
+      }
+      // otherwise fall through to render label-only placeholder below
+    }
     const entry = id && RASTER_MANIFEST && RASTER_MANIFEST[id];
     if(entry && (entry.webp || entry.png)){
       const picture = document.createElement('picture');
