@@ -767,32 +767,62 @@ function rerollUnkeptDice(){
   toReroll.forEach(x=> x.d.classList.add('spin'));
   setTimeout(()=>{
     // For fairness, pick new icons for the positions being rerolled
-    // Best-effort: avoid assigning the same icon back to a rerolled die,
-    // and avoid choosing icons that are currently kept.
-    const keptIds = Array.from(document.querySelectorAll('.die.kept')).map(d=>{
+    // Prefer sampling without replacement from icons that are not currently kept.
+    const keptIds = new Set(Array.from(document.querySelectorAll('.die.kept')).map(d=>{
       const f = d.querySelector('.face'); return f && f.dataset.choice ? f.dataset.choice : null;
-    }).filter(Boolean);
-    const assigned = new Set(keptIds);
+    }).filter(Boolean));
     const changedLabels = [];
-    toReroll.forEach(x=>{
-      const face = x.d.querySelector('.face');
-      const oldId = face.dataset.choice;
-      // Build candidate pool: SAFE_ICONS ids not equal to oldId and not already assigned
-      let pool = SAFE_ICONS.map(ic=>ic).filter(ic => ic && ic.id && ic.id !== oldId && !assigned.has(ic.id));
-      // If pool empty, relax constraint to allow icons not equal to oldId (may include kept if necessary)
-      if(pool.length === 0) pool = SAFE_ICONS.map(ic=>ic).filter(ic => ic && ic.id && ic.id !== oldId);
-      // If still empty (very small set), allow any SAFE_ICON
-      if(pool.length === 0) pool = SAFE_ICONS.slice();
-      const icon = rand(pool);
-      face.innerHTML = '';
-      const node = createIconNode(icon);
-      face.appendChild(node);
-      face.setAttribute('aria-label', icon.label);
-      if(oldId !== icon.id) changedLabels.push(icon.label);
-      face.dataset.choice = icon.id;
-      assigned.add(icon.id);
-      x.d.classList.remove('spin');
-    });
+    // Pool of available icons (exclude kept)
+    let available = SAFE_ICONS.map(ic=>ic).filter(ic=>ic && ic.id && !keptIds.has(ic.id));
+
+    // If we have enough unique available icons, sample without replacement for all rerolls
+    if(available.length >= toReroll.length){
+      // shuffle available
+      for(let i=available.length-1;i>0;i--){ const j = Math.floor(Math.random()*(i+1)); [available[i], available[j]] = [available[j], available[i]]; }
+      toReroll.forEach((x, idx)=>{
+        const face = x.d.querySelector('.face');
+        const oldId = face.dataset.choice;
+        const icon = available[idx];
+        face.innerHTML = '';
+        face.appendChild(createIconNode(icon));
+        face.setAttribute('aria-label', icon.label);
+        if(oldId !== icon.id) changedLabels.push(icon.label);
+        face.dataset.choice = icon.id;
+        x.d.classList.remove('spin');
+      });
+    } else {
+      // Not enough unique icons to fully avoid duplicates; do a best-effort unique assignment first
+      const assigned = new Set(Array.from(keptIds));
+      // shuffle a working pool of non-kept icons
+      let pool = SAFE_ICONS.map(ic=>ic).filter(ic=>ic && ic.id && !keptIds.has(ic.id));
+      for(let i=pool.length-1;i>0;i--){ const j = Math.floor(Math.random()*(i+1)); [pool[i], pool[j]] = [pool[j], pool[i]]; }
+      toReroll.forEach(x=>{
+        const face = x.d.querySelector('.face');
+        const oldId = face.dataset.choice;
+        // try to pick from pool an icon not equal to oldId and not assigned
+        let choice = null;
+        for(let i=0;i<pool.length;i++){
+          if(pool[i].id !== oldId && !assigned.has(pool[i].id)){ choice = pool.splice(i,1)[0]; break; }
+        }
+        // if still no choice, try any from pool not equal to oldId
+        if(!choice){
+          for(let i=0;i<pool.length;i++){ if(pool[i].id !== oldId){ choice = pool.splice(i,1)[0]; break; } }
+        }
+        // if still no choice, fall back to any SAFE_ICON not equal to oldId
+        if(!choice){
+          const fallback = SAFE_ICONS.find(ic=>ic.id !== oldId && !assigned.has(ic.id));
+          choice = fallback || SAFE_ICONS[Math.floor(Math.random()*SAFE_ICONS.length)];
+        }
+        const icon = choice;
+        face.innerHTML = '';
+        face.appendChild(createIconNode(icon));
+        face.setAttribute('aria-label', icon.label);
+        if(oldId !== icon.id) changedLabels.push(icon.label);
+        face.dataset.choice = icon.id;
+        assigned.add(icon.id);
+        x.d.classList.remove('spin');
+      });
+    }
     generatePrompt();
     try{ persistLastRoll(); saveKeptIndices(); }catch(e){}
     // announce changes for screen readers
