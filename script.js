@@ -197,35 +197,78 @@ function buildPresetForBand(band){
   return ids;
 }
 
+// Build preset but also return unmatched labels so UI can offer placeholders
+function buildPresetWithUnmatched(band){
+  const raw = GRADE_PRESETS_RAW[band] || [];
+  const ids = [];
+  const unmatched = [];
+  raw.forEach(item => {
+    const key = normalizeLabel(item.replace(/with x/ig,'with x').replace(/’/g, "'"));
+    const matched = ICON_LABEL_MAP[key];
+    if(matched && !ids.includes(matched)) ids.push(matched);
+    else unmatched.push(item);
+  });
+  return { ids, unmatched };
+}
+
 // Apply preset into SAFE_OBJECTS (respecting lock if set)
 function applyGradePreset(band){
   if(isLocked()){
-    // show message in modal area
     if(pinMsgModal) pinMsgModal.textContent = 'Unlock to change grade presets.';
     return false;
   }
-  const ids = buildPresetForBand(band);
+  const { ids, unmatched } = buildPresetWithUnmatched(band);
   SAFE_OBJECTS = ids.slice();
   SAFE_ICONS = ICONS.filter(ic => SAFE_OBJECTS.includes(ic.id));
   saveSafeObjects(SAFE_OBJECTS);
   try{ localStorage.setItem(LS_GRADE_BAND, band); }catch(e){}
   renderSafeListUI();
   checkRepeatWarning();
-  if(pinMsgModal) pinMsgModal.textContent = 'Grade preset applied.';
+  if(pinMsgModal) pinMsgModal.textContent = `Grade preset applied. ${unmatched.length?unmatched.length+' unmatched items omitted.' : ''}`;
   return true;
 }
 
 // Preview preset without applying (shows a short note with matched labels)
 function previewGradePreset(band){
-  const ids = buildPresetForBand(band);
+  const { ids, unmatched } = buildPresetWithUnmatched(band);
   const labels = ids.map(id => (ICONS.find(ic=>ic.id===id)||{label:id}).label);
   const note = document.getElementById('grade-preset-note');
   if(note){
     if(labels.length === 0) { note.textContent = 'No matching icons found for this grade band.'; }
     else note.textContent = 'Preset includes: ' + labels.slice(0,12).join(', ') + (labels.length > 12 ? '...' : '');
+    if(unmatched && unmatched.length) note.textContent += ` (${unmatched.length} items will need icons)`;
     note.style.display = 'block';
     setTimeout(()=>{ note.style.display = 'none'; }, 6000);
   }
+}
+
+// Apply preset but create placeholder ICON entries for unmatched labels so they render as text
+function applyGradePresetWithPlaceholders(band){
+  if(isLocked()){
+    if(pinMsgModal) pinMsgModal.textContent = 'Unlock to change grade presets.';
+    return false;
+  }
+  const { ids, unmatched } = buildPresetWithUnmatched(band);
+  const placeholderIds = [];
+  unmatched.forEach((label, idx)=>{
+    // create a synthetic id that's unlikely to collide
+    const pid = `placeholder-${band}-${idx}-${normalizeLabel(label).replace(/\s+/g,'-')}`;
+    // add to ICONS and maps so rendering can use label-only entries
+    const obj = { id: pid, label: label };
+    ICONS.push(obj);
+    ICON_LABEL_MAP[normalizeLabel(label)] = pid;
+    ICON_LABEL_MAP[normalizeLabel(pid)] = pid;
+    placeholderIds.push(pid);
+  });
+  // final safe objects = matched ids + placeholders
+  SAFE_OBJECTS = ids.concat(placeholderIds);
+  SAFE_ICONS = ICONS.filter(ic => SAFE_OBJECTS.includes(ic.id));
+  saveSafeObjects(SAFE_OBJECTS);
+  try{ localStorage.setItem(LS_GRADE_BAND, band); }catch(e){}
+  renderSafeListUI();
+  checkRepeatWarning();
+  if(pinMsgModal) pinMsgModal.textContent = `Grade preset applied with ${placeholderIds.length} placeholders.`;
+  return true;
 }
 
 // persisted state keys
@@ -479,10 +522,12 @@ async function init(){
     const gradeSelect = document.getElementById('grade-band-select');
     const applyBtn = document.getElementById('apply-grade-preset');
     const previewBtn = document.getElementById('preview-grade-preset');
+    const applyPlaceBtn = document.getElementById('apply-grade-preset-placeholders');
     // restore selection
     const savedBand = localStorage.getItem(LS_GRADE_BAND);
     if(gradeSelect && savedBand) gradeSelect.value = savedBand;
     if(applyBtn && gradeSelect){ applyBtn.addEventListener('click', ()=>{ applyGradePreset(gradeSelect.value); }); }
+    if(applyPlaceBtn && gradeSelect){ applyPlaceBtn.addEventListener('click', ()=>{ applyGradePresetWithPlaceholders(gradeSelect.value); }); }
     if(previewBtn && gradeSelect){ previewBtn.addEventListener('click', ()=>{ previewGradePreset(gradeSelect.value); }); }
   }catch(e){}
 }
