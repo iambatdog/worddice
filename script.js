@@ -217,13 +217,32 @@ function applyGradePreset(band){
     if(pinMsgModal) pinMsgModal.textContent = 'Unlock to change grade presets.';
     return false;
   }
-  const { ids, unmatched } = buildPresetWithUnmatched(band);
+  let { ids, unmatched } = buildPresetWithUnmatched(band);
+  // if nothing matched, fall back to a reasonable default to avoid clearing the safe list
+  if(!ids || ids.length === 0){
+    ids = buildPresetForBand(band);
+    // recalc unmatched as everything not matched
+    const matchedSet = new Set(ids);
+    unmatched = (GRADE_PRESETS_RAW[band] || []).filter(it=>{
+      const key = normalizeLabel(it.replace(/’/g, "'"));
+      const m = ICON_LABEL_MAP[key];
+      return !m || !matchedSet.has(m);
+    });
+  }
   SAFE_OBJECTS = ids.slice();
   SAFE_ICONS = ICONS.filter(ic => SAFE_OBJECTS.includes(ic.id));
   saveSafeObjects(SAFE_OBJECTS);
   try{ localStorage.setItem(LS_GRADE_BAND, band); }catch(e){}
   renderSafeListUI();
   checkRepeatWarning();
+  // Provide clearer feedback in the modal note area as well as the pin message
+  const note = document.getElementById('grade-preset-note');
+  if(note){
+    if(ids.length === 0) note.textContent = 'No icons matched; default selection applied.';
+    else note.textContent = `Grade preset applied. ${unmatched.length?unmatched.length+' unmatched items omitted.' : 'All matched.'}`;
+    note.style.display = 'block';
+    setTimeout(()=>{ note.style.display = 'none'; }, 6000);
+  }
   if(pinMsgModal) pinMsgModal.textContent = `Grade preset applied. ${unmatched.length?unmatched.length+' unmatched items omitted.' : ''}`;
   return true;
 }
