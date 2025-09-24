@@ -545,7 +545,7 @@ async function init(){
     // restore selection
     const savedBand = localStorage.getItem(LS_GRADE_BAND);
     if(gradeSelect && savedBand) gradeSelect.value = savedBand;
-    if(applyBtn && gradeSelect){ applyBtn.addEventListener('click', ()=>{ applyGradePreset(gradeSelect.value); }); }
+  if(applyBtn && gradeSelect){ applyBtn.addEventListener('click', ()=>{ console.log('Apply Grade Preset clicked', gradeSelect.value); applyGradePreset(gradeSelect.value); const note = document.getElementById('grade-preset-note'); if(note){ note.textContent = 'Applying preset...'; note.style.display = 'block'; setTimeout(()=>{ note.style.display = 'none'; }, 2000); } }); }
     if(applyPlaceBtn && gradeSelect){ applyPlaceBtn.addEventListener('click', ()=>{ applyGradePresetWithPlaceholders(gradeSelect.value); }); }
     if(previewBtn && gradeSelect){ previewBtn.addEventListener('click', ()=>{ previewGradePreset(gradeSelect.value); }); }
   }catch(e){}
