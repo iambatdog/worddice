@@ -119,8 +119,10 @@ const diceArea = document.getElementById('dice-area');
 let layoutToggle = document.getElementById('layout-toggle');
 const diceCountEl = document.getElementById('dice-count');
 const rollBtn = document.getElementById('roll-btn');
-const newPromptBtn = document.getElementById('new-prompt');
+// newPrompt button removed; reuse rollBtn for both initial roll and rerolls
+let hasRolled = false;
 const promptText = document.getElementById('prompt-text');
+let prevDiceCount = Number(diceCountEl.value);
 
 // helper: pick random element
 function rand(arr){ return arr[Math.floor(Math.random()*arr.length)]; }
@@ -151,6 +153,11 @@ let SAFE_OBJECTS = loadSafeObjects();
 // sanitize saved safe objects to remove ids that no longer exist in ICONS
 SAFE_OBJECTS = SAFE_OBJECTS.filter(id => ICONS.some(ic => ic.id === id));
 let SAFE_ICONS = ICONS.filter(ic => SAFE_OBJECTS.includes(ic.id));
+
+// persisted state keys
+const LS_KEPT = 'wd_kept_indices';
+const LS_LAST_PICKS = 'wd_last_picks';
+const LS_HAS_ROLLED = 'wd_has_rolled';
 
 // UI: render safe-list checkboxes
 let safeListContainer = document.getElementById('safe-list');
@@ -390,6 +397,8 @@ async function init(){
   }catch(e){}
   renderDiceSlots(Number(diceCountEl.value));
   updatePinUI();
+  // restore previous roll/kept state if present
+  restoreLastRoll();
 }
 
 // start
@@ -446,15 +455,26 @@ function renderDiceSlots(count){
   else diceArea.classList.add('large');
 
   // compute columns based on preferred rows so layout adapts: cols = ceil(count / rows)
-  const rows = preferredRows();
+  // If horizontal class is applied, force a single row so items lay out left-to-right
+  const rows = diceArea.classList.contains('horizontal') ? 1 : preferredRows();
   const cols = Math.ceil(count / rows);
   diceArea.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
 
   for(let i=0;i<count;i++){
     const die = document.createElement('div');
     die.className = 'die';
-    die.setAttribute('role','img');
+    die.setAttribute('tabindex', '0');
+  die.setAttribute('role', 'button');
+  die.setAttribute('aria-pressed', 'false');
     die.setAttribute('aria-label', 'dice slot');
+    // restore kept state from stored data if available
+    try{
+      const storedKept = JSON.parse(localStorage.getItem('wd_kept_indices') || '[]');
+      if(storedKept.includes(i)){
+        die.classList.add('kept');
+        die.setAttribute('aria-pressed', 'true');
+      }
+    }catch(e){}
   // show a blank placeholder (don't default to the first icon)
   const placeholderNode = document.createElement('div');
   placeholderNode.className = 'placeholder empty';
@@ -466,6 +486,71 @@ function renderDiceSlots(count){
     die.appendChild(face);
     diceArea.appendChild(die);
   }
+}
+
+// After an initial roll, save the choices and show helper
+function persistLastRoll(){
+  try{
+    const picks = Array.from(document.querySelectorAll('.face')).map(f=>f.dataset.choice||null);
+    localStorage.setItem(LS_LAST_PICKS, JSON.stringify(picks));
+    localStorage.setItem(LS_HAS_ROLLED, '1');
+  }catch(e){}
+}
+
+function saveKeptIndices(){
+  try{
+    // store kept by icon id (more robust across dice count changes)
+    const keptIds = Array.from(document.querySelectorAll('.die.kept')).map(d=>{
+      const face = d.querySelector('.face');
+      return face && face.dataset.choice ? face.dataset.choice : null;
+    }).filter(Boolean);
+    localStorage.setItem(LS_KEPT, JSON.stringify(keptIds));
+  }catch(e){}
+}
+
+function restoreLastRoll(){
+  try{
+    const raw = localStorage.getItem(LS_LAST_PICKS);
+    if(!raw) return;
+    const picks = JSON.parse(raw);
+    if(!Array.isArray(picks)) return;
+    // ensure dice slots match picks length
+    const dice = Array.from(document.querySelectorAll('.face'));
+    if(dice.length !== picks.length) return;
+    dice.forEach((face, idx)=>{
+      const id = picks[idx];
+      if(!id) return;
+      const icon = ICONS.find(ic=>ic.id===id) || rand(SAFE_ICONS);
+      face.innerHTML = '';
+      const node = createIconNode(icon);
+      face.appendChild(node);
+      face.setAttribute('aria-label', icon.label);
+      face.dataset.choice = icon.id;
+    });
+    // restore kept by id
+    const keptRaw = localStorage.getItem(LS_KEPT);
+    if(keptRaw){
+      const keptIds = JSON.parse(keptRaw) || [];
+      Array.from(document.querySelectorAll('.die')).forEach(die => {
+        const face = die.querySelector('.face');
+        const id = face && face.dataset.choice;
+        if(id && keptIds.includes(id)){
+          die.classList.add('kept');
+          die.setAttribute('aria-pressed','true');
+        }
+      });
+    }
+    // mark hasRolled and update UI
+    const h = localStorage.getItem(LS_HAS_ROLLED);
+    if(h === '1'){
+      hasRolled = true;
+      rollBtn.textContent = 'Reroll Dice';
+      rollBtn.classList.add('reroll');
+      // show helper briefly
+      const helper = document.getElementById('roll-helper');
+      if(helper){ helper.textContent = 'Tip: click a die to keep it before rerolling.'; helper.hidden = false; setTimeout(()=>helper.hidden=true, 6000); }
+    }
+  }catch(e){}
 }
 
 // roll animation and result
@@ -491,6 +576,8 @@ function rollDice(){
       face.dataset.choice = icon.id;
     });
     generatePrompt();
+  // persist this roll
+  try{ persistLastRoll(); }catch(e){}
   }, 700);
 }
 
@@ -518,7 +605,16 @@ function generatePrompt(){
 
 // wire up events
 diceCountEl.addEventListener('change', ()=>{
-  renderDiceSlots(Number(diceCountEl.value));
+  const newCount = Number(diceCountEl.value);
+  // if number of dice changed, clear persisted roll state to avoid mismatches
+  if(newCount !== prevDiceCount){
+    try{ localStorage.removeItem(LS_LAST_PICKS); localStorage.removeItem(LS_KEPT); localStorage.removeItem(LS_HAS_ROLLED); }catch(e){}
+    hasRolled = false;
+    rollBtn.textContent = 'Roll Dice';
+    rollBtn.classList.remove('reroll');
+  }
+  prevDiceCount = newCount;
+  renderDiceSlots(newCount);
   checkRepeatWarning();
 });
 
@@ -539,8 +635,14 @@ if(settingsBtn){
     e.preventDefault();
     if(!settingsModal) return;
     settingsModal.hidden = false;
-    // sync modal layout toggle state
-    if(layoutToggleModal && layoutToggle) layoutToggleModal.checked = !!layoutToggle.checked;
+    // sync modal layout toggle state from current dice area or saved preference
+    try{
+      const saved = localStorage.getItem('wd_layout_horizontal');
+      const isHorizontal = diceArea && diceArea.classList.contains('horizontal');
+      if(layoutToggleModal) layoutToggleModal.checked = isHorizontal || saved === '1';
+      // if inline main toggle exists, keep it in sync as well
+      if(layoutToggle && layoutToggleModal) layoutToggle.checked = !!layoutToggleModal.checked;
+    }catch(e){}
     // render safe-list into modal (renderSafeListUI already does cloning on init but ensure sync)
     renderSafeListUI();
     // focus first focusable in modal
@@ -558,16 +660,17 @@ function closeSettingsModal(){
   const modal = settingsModal || document.getElementById('settings-modal');
   if(!modal) return;
   modal.hidden = true;
-  // sync back modal layout toggle state into main toggle
-  const ltm = layoutToggleModal || document.getElementById('layout-toggle-modal');
-  const lt = layoutToggle || document.getElementById('layout-toggle');
-  if(ltm && lt){
-    lt.checked = !!ltm.checked;
-    const on = !!lt.checked;
-    if(on) diceArea.classList.add('horizontal'); else diceArea.classList.remove('horizontal');
-    try{ localStorage.setItem('wd_layout_horizontal', on ? '1' : '0'); }catch(e){}
+  // sync modal layout toggle state into the UI and persist it (work even if inline toggle was removed)
+  try{
+    const ltm = layoutToggleModal || document.getElementById('layout-toggle-modal');
+    const checked = ltm ? !!ltm.checked : false;
+    if(checked) diceArea.classList.add('horizontal'); else diceArea.classList.remove('horizontal');
+    try{ localStorage.setItem('wd_layout_horizontal', checked ? '1' : '0'); }catch(e){}
+    // also update main inline toggle if it exists
+    const lt = layoutToggle || document.getElementById('layout-toggle');
+    if(lt) lt.checked = checked;
     renderDiceSlots(Number(diceCountEl.value));
-  }
+  }catch(e){}
   // stop focus trap and restore focus to previous element
   stopFocusTrap();
 }
@@ -609,13 +712,96 @@ const pinMsgObserver = new MutationObserver(()=>{
 });
 if(pinMsg) pinMsgObserver.observe(pinMsg, {childList:true,characterData:true,subtree:true});
 
+// Roll / Reroll behavior: initial click rolls all dice, subsequent clicks reroll only unlocked dice.
 rollBtn.addEventListener('click', ()=>{
-  rollDice();
+  if(!hasRolled){
+    // first-time roll: generate all dice
+    rollDice();
+    hasRolled = true;
+    // change button label to Reroll
+    rollBtn.textContent = 'Reroll Dice';
+    rollBtn.classList.add('reroll');
+  } else {
+    // subsequent rolls: reroll only dice that are not kept
+    rerollUnkeptDice();
+  }
 });
 
-newPromptBtn.addEventListener('click', ()=>{
-  generatePrompt();
+// Allow clicking a die to toggle kept state
+document.addEventListener('click', (e)=>{
+  const die = e.target.closest && e.target.closest('.die');
+  if(!die) return;
+  // only allow toggling after first roll (so students don't 'keep' blanks)
+  if(!hasRolled) return;
+  die.classList.toggle('kept');
+  const pressed = die.classList.contains('kept');
+  die.setAttribute('aria-pressed', pressed ? 'true' : 'false');
+  saveKeptIndices();
 });
+
+// keyboard toggle: Space or Enter on a focused die toggles kept
+document.addEventListener('keydown', (e)=>{
+  const el = document.activeElement;
+  if(!el || !el.classList || !el.classList.contains('die')) return;
+  if(!hasRolled) return;
+  if(e.key === ' ' || e.key === 'Spacebar' || e.key === 'Enter'){
+    e.preventDefault();
+    el.classList.toggle('kept');
+    const pressed = el.classList.contains('kept');
+    el.setAttribute('aria-pressed', pressed ? 'true' : 'false');
+    saveKeptIndices();
+  }
+});
+
+function rerollUnkeptDice(){
+  const dice = Array.from(document.querySelectorAll('.die'));
+  const picks = pickUniqueIcons(dice.length);
+  // Determine which indexes to reroll (those without .kept)
+  const toReroll = dice.map((d,i)=> ({d,i})).filter(x=>!x.d.classList.contains('kept'));
+  if(toReroll.length === 0){
+    // nothing to reroll, but still refresh prompt
+    generatePrompt();
+    return;
+  }
+  // animate only the dice that will change
+  toReroll.forEach(x=> x.d.classList.add('spin'));
+  setTimeout(()=>{
+    // For fairness, pick new icons for the positions being rerolled
+    // Best-effort: avoid assigning the same icon back to a rerolled die,
+    // and avoid choosing icons that are currently kept.
+    const keptIds = Array.from(document.querySelectorAll('.die.kept')).map(d=>{
+      const f = d.querySelector('.face'); return f && f.dataset.choice ? f.dataset.choice : null;
+    }).filter(Boolean);
+    const assigned = new Set(keptIds);
+    const changedLabels = [];
+    toReroll.forEach(x=>{
+      const face = x.d.querySelector('.face');
+      const oldId = face.dataset.choice;
+      // Build candidate pool: SAFE_ICONS ids not equal to oldId and not already assigned
+      let pool = SAFE_ICONS.map(ic=>ic).filter(ic => ic && ic.id && ic.id !== oldId && !assigned.has(ic.id));
+      // If pool empty, relax constraint to allow icons not equal to oldId (may include kept if necessary)
+      if(pool.length === 0) pool = SAFE_ICONS.map(ic=>ic).filter(ic => ic && ic.id && ic.id !== oldId);
+      // If still empty (very small set), allow any SAFE_ICON
+      if(pool.length === 0) pool = SAFE_ICONS.slice();
+      const icon = rand(pool);
+      face.innerHTML = '';
+      const node = createIconNode(icon);
+      face.appendChild(node);
+      face.setAttribute('aria-label', icon.label);
+      if(oldId !== icon.id) changedLabels.push(icon.label);
+      face.dataset.choice = icon.id;
+      assigned.add(icon.id);
+      x.d.classList.remove('spin');
+    });
+    generatePrompt();
+    try{ persistLastRoll(); saveKeptIndices(); }catch(e){}
+    // announce changes for screen readers
+    try{
+      const ann = document.getElementById('aria-announcer');
+      if(ann && changedLabels.length){ ann.textContent = `Rerolled: ${changedLabels.join(', ')}`; }
+    }catch(e){}
+  }, 600);
+}
 
 // initialization is handled in init()
 
@@ -629,8 +815,8 @@ window.addEventListener('resize', ()=>{
   }, 120);
 });
 
-// small accessibility: allow keyboard Enter on roll
-rollBtn.addEventListener('keyup', (e)=>{ if(e.key==='Enter') rollDice(); });
+// small accessibility: allow keyboard Enter on roll (mirror click behavior)
+rollBtn.addEventListener('keyup', (e)=>{ if(e.key==='Enter') { if(!hasRolled){ rollDice(); hasRolled = true; rollBtn.textContent = 'Reroll Dice'; rollBtn.classList.add('reroll'); } else { rerollUnkeptDice(); } } });
 
 // PIN button wiring
 if(setPinBtn) setPinBtn.addEventListener('click', (e)=>{ e.preventDefault(); setPin(); });
