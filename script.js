@@ -116,7 +116,7 @@ function createIconNode(icon, opts={}){
 }
 
 const diceArea = document.getElementById('dice-area');
-const layoutToggle = document.getElementById('layout-toggle');
+let layoutToggle = document.getElementById('layout-toggle');
 const diceCountEl = document.getElementById('dice-count');
 const rollBtn = document.getElementById('roll-btn');
 const newPromptBtn = document.getElementById('new-prompt');
@@ -153,14 +153,102 @@ SAFE_OBJECTS = SAFE_OBJECTS.filter(id => ICONS.some(ic => ic.id === id));
 let SAFE_ICONS = ICONS.filter(ic => SAFE_OBJECTS.includes(ic.id));
 
 // UI: render safe-list checkboxes
-const safeListContainer = document.getElementById('safe-list');
-const safePanel = document.getElementById('safe-list-panel');
+let safeListContainer = document.getElementById('safe-list');
+let safePanel = document.getElementById('safe-list-panel');
+// modal-based safe list and controls (will reuse same logic)
+const safeListModalContainer = document.getElementById('safe-list-modal');
+const settingsBtn = document.getElementById('settings-btn');
+const settingsModal = document.getElementById('settings-modal');
+const settingsClose = document.getElementById('settings-close');
+const settingsBackdrop = document.getElementById('settings-backdrop');
+const layoutToggleModal = document.getElementById('layout-toggle-modal');
+// modal PIN elements
+const pinInputModal = document.getElementById('pin-input-modal');
+const setPinBtnModal = document.getElementById('set-pin-btn-modal');
+const lockBtnModal = document.getElementById('lock-btn-modal');
+const unlockBtnModal = document.getElementById('unlock-btn-modal');
+const pinMsgModal = document.getElementById('pin-msg-modal');
 // PIN UI elements
-const pinInput = document.getElementById('pin-input');
-const setPinBtn = document.getElementById('set-pin-btn');
-const lockBtn = document.getElementById('lock-btn');
-const unlockBtn = document.getElementById('unlock-btn');
-const pinMsg = document.getElementById('pin-msg');
+let pinInput = document.getElementById('pin-input');
+let setPinBtn = document.getElementById('set-pin-btn');
+let lockBtn = document.getElementById('lock-btn');
+let unlockBtn = document.getElementById('unlock-btn');
+let pinMsg = document.getElementById('pin-msg');
+
+// Focus trap state
+let _focusTrapPrev = null;
+let _focusTrapHandler = null;
+let _inertModified = [];
+
+function startFocusTrap(modal){
+  try{
+    _focusTrapPrev = document.activeElement;
+    const focusable = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), [tabindex]:not([tabindex="-1"])';
+    const nodes = Array.from(modal.querySelectorAll(focusable)).filter(n=>n.offsetParent !== null);
+    if(nodes.length === 0) return;
+    const first = nodes[0];
+    const last = nodes[nodes.length-1];
+    _focusTrapHandler = function(e){
+      if(e.key !== 'Tab') return;
+      // manage forward/backward tabbing
+      if(e.shiftKey){
+        if(document.activeElement === first){ e.preventDefault(); last.focus(); }
+      } else {
+        if(document.activeElement === last){ e.preventDefault(); first.focus(); }
+      }
+    };
+    document.addEventListener('keydown', _focusTrapHandler, true);
+    // also ensure focus stays inside on focusin
+    document.addEventListener('focusin', _focusInEnforcer, true);
+    // hide background from assistive tech and make inert if supported
+    try{
+      // apply to top-level siblings except any that are (or contain) the modal so we don't inert the modal itself
+      const bodyChildren = Array.from(document.body.children);
+      _inertModified = [];
+      bodyChildren.forEach(el => {
+        if(el === modal || el.contains(modal)) return;
+        const prev = { el, prevAria: el.hasAttribute('aria-hidden') ? el.getAttribute('aria-hidden') : null };
+        // store previous inert if supported
+        if('inert' in HTMLElement.prototype) prev.prevInert = el.inert;
+        _inertModified.push(prev);
+        el.setAttribute('aria-hidden', 'true');
+        if('inert' in HTMLElement.prototype) el.inert = true;
+      });
+    }catch(e){}
+  }catch(e){ /* ignore */ }
+}
+
+function _focusInEnforcer(e){
+  const modal = document.getElementById('settings-modal');
+  if(!modal) return;
+  if(modal.hidden) return;
+  if(!modal.contains(e.target)){
+    // move focus to the first focusable inside
+    const focusable = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), [tabindex]:not([tabindex="-1"])';
+    const nodes = Array.from(modal.querySelectorAll(focusable)).filter(n=>n.offsetParent !== null);
+    if(nodes.length) nodes[0].focus();
+  }
+}
+
+function stopFocusTrap(){
+  try{
+    if(_focusTrapHandler) document.removeEventListener('keydown', _focusTrapHandler, true);
+    document.removeEventListener('focusin', _focusInEnforcer, true);
+    if(_focusTrapPrev && _focusTrapPrev.focus) _focusTrapPrev.focus();
+    _focusTrapPrev = null;
+    _focusTrapHandler = null;
+    // restore background accessibility
+    try{
+      _inertModified.forEach(item => {
+        try{
+          if(item.prevAria === null) item.el.removeAttribute('aria-hidden'); else item.el.setAttribute('aria-hidden', item.prevAria);
+          if('prevInert' in item && 'inert' in HTMLElement.prototype) item.el.inert = !!item.prevInert;
+        }catch(e){}
+      });
+      _inertModified = [];
+    }catch(e){}
+  }catch(e){}
+}
 
 // localStorage keys
 const LS_PIN_HASH = 'wd_pin_hash';
@@ -205,15 +293,24 @@ async function setPin(){
 
 function updatePinUI(){
   const locked = isLocked();
-  // disable checkboxes when locked
-  Array.from(document.querySelectorAll('#safe-list input')).forEach(i=>i.disabled = locked);
+  // disable checkboxes when locked (apply to both primary and modal lists)
+  Array.from(document.querySelectorAll('#safe-list input, #safe-list-modal input')).forEach(i=>i.disabled = locked);
+  // primary buttons
   lockBtn.style.display = locked ? 'none' : '';
   unlockBtn.style.display = locked ? '' : 'none';
+  // modal buttons (if present)
+  if(lockBtnModal) lockBtnModal.style.display = locked ? 'none' : '';
+  if(unlockBtnModal) unlockBtnModal.style.display = locked ? '' : 'none';
 }
 
 function renderSafeListUI(){
-  if(!safeListContainer) return;
-  safeListContainer.innerHTML = '';
+  // Determine the primary container to render into: prefer the inline safe list if present,
+  // otherwise render directly into the modal container.
+  const primary = safeListContainer || safeListModalContainer;
+  if(!primary) return;
+  primary.innerHTML = '';
+  // clear modal container only if it's separate from primary
+  if(safeListModalContainer && safeListModalContainer !== primary) safeListModalContainer.innerHTML = '';
   ICONS.forEach(icon => {
     const id = icon.id;
     const wrapper = document.createElement('label');
@@ -226,7 +323,7 @@ function renderSafeListUI(){
     const span = document.createElement('span');
     span.textContent = icon.label;
     cb.addEventListener('change', ()=>{
-      const checked = Array.from(safeListContainer.querySelectorAll('input:checked')).map(i=>i.dataset.id);
+      const checked = Array.from(primary.querySelectorAll('input:checked')).map(i=>i.dataset.id);
       SAFE_OBJECTS = checked.length ? checked : DEFAULT_SAFE_OBJECTS.slice();
       SAFE_ICONS = ICONS.filter(ic => SAFE_OBJECTS.includes(ic.id));
       saveSafeObjects(SAFE_OBJECTS);
@@ -235,7 +332,18 @@ function renderSafeListUI(){
     wrapper.appendChild(cb);
     wrapper.appendChild(previewNode);
     wrapper.appendChild(span);
-    safeListContainer.appendChild(wrapper);
+    primary.appendChild(wrapper);
+    // Also clone into modal list if present and different from primary (clone node to keep listeners separate)
+    if(safeListModalContainer && safeListModalContainer !== primary){
+      const clone = wrapper.cloneNode(true);
+      // sync change events: when modal checkbox changes, trigger the main handler by dispatching a change on the matching primary checkbox
+      const modalCb = clone.querySelector('input');
+      modalCb.addEventListener('change', ()=>{
+        const mainCb = primary.querySelector(`input[data-id="${modalCb.dataset.id}"]`);
+        if(mainCb){ mainCb.checked = modalCb.checked; mainCb.dispatchEvent(new Event('change', {bubbles:true})); }
+      });
+      safeListModalContainer.appendChild(clone);
+    }
   });
 }
 
@@ -260,6 +368,16 @@ async function init(){
   await loadRasterManifest();
   // After manifest load we should re-create SAFE_ICONS from current SAFE_OBJECTS (in case sanitization relied on manifest)
   SAFE_ICONS = ICONS.filter(ic => SAFE_OBJECTS.includes(ic.id));
+  // re-resolve DOM elements that may have been removed from the main page and fall back to modal equivalents
+  safeListContainer = safeListContainer || document.getElementById('safe-list');
+  safePanel = safePanel || document.getElementById('safe-list-panel');
+  layoutToggle = layoutToggle || document.getElementById('layout-toggle');
+  pinInput = pinInput || document.getElementById('pin-input');
+  setPinBtn = setPinBtn || document.getElementById('set-pin-btn');
+  lockBtn = lockBtn || document.getElementById('lock-btn');
+  unlockBtn = unlockBtn || document.getElementById('unlock-btn');
+  pinMsg = pinMsg || document.getElementById('pin-msg');
+
   renderSafeListUI();
   checkRepeatWarning();
   // apply saved layout preference (optional horizontal layout)
@@ -414,6 +532,82 @@ if(layoutToggle){
     renderDiceSlots(Number(diceCountEl.value));
   });
 }
+
+// Settings modal open/close and syncing
+if(settingsBtn){
+  settingsBtn.addEventListener('click', (e)=>{
+    e.preventDefault();
+    if(!settingsModal) return;
+    settingsModal.hidden = false;
+    // sync modal layout toggle state
+    if(layoutToggleModal && layoutToggle) layoutToggleModal.checked = !!layoutToggle.checked;
+    // render safe-list into modal (renderSafeListUI already does cloning on init but ensure sync)
+    renderSafeListUI();
+    // focus first focusable in modal
+    setTimeout(()=>{
+      const focusEl = settingsModal.querySelector('input, button');
+      if(focusEl) focusEl.focus();
+      // start trapping focus inside modal
+      startFocusTrap(settingsModal);
+    }, 50);
+  });
+}
+
+function closeSettingsModal(){
+  // re-query in case elements were not available at initial script run
+  const modal = settingsModal || document.getElementById('settings-modal');
+  if(!modal) return;
+  modal.hidden = true;
+  // sync back modal layout toggle state into main toggle
+  const ltm = layoutToggleModal || document.getElementById('layout-toggle-modal');
+  const lt = layoutToggle || document.getElementById('layout-toggle');
+  if(ltm && lt){
+    lt.checked = !!ltm.checked;
+    const on = !!lt.checked;
+    if(on) diceArea.classList.add('horizontal'); else diceArea.classList.remove('horizontal');
+    try{ localStorage.setItem('wd_layout_horizontal', on ? '1' : '0'); }catch(e){}
+    renderDiceSlots(Number(diceCountEl.value));
+  }
+  // stop focus trap and restore focus to previous element
+  stopFocusTrap();
+}
+
+if(settingsClose) settingsClose.addEventListener('click', (e)=>{ e.preventDefault(); closeSettingsModal(); });
+if(settingsBackdrop) settingsBackdrop.addEventListener('click', (e)=>{ closeSettingsModal(); });
+
+// allow Esc to close modal
+window.addEventListener('keydown', (e)=>{ if(e.key === 'Escape' && settingsModal && !settingsModal.hidden) closeSettingsModal(); });
+
+// Fallback delegation: close when user clicks close control or backdrop even if initial refs failed
+document.addEventListener('click', (e)=>{
+  const c = e.target.closest && e.target.closest('#settings-close');
+  if(c){ e.preventDefault(); closeSettingsModal(); }
+  const b = e.target.closest && e.target.closest('#settings-backdrop');
+  if(b){ e.preventDefault(); closeSettingsModal(); }
+});
+
+// wire modal layout toggle to update live (so users see changes immediately)
+if(layoutToggleModal){
+  layoutToggleModal.addEventListener('change', (e)=>{
+    const on = !!e.target.checked;
+    // reflect immediately on the main dice area so preview updates while modal open
+    if(on) diceArea.classList.add('horizontal'); else diceArea.classList.remove('horizontal');
+    try{ localStorage.setItem('wd_layout_horizontal', on ? '1' : '0'); }catch(e){}
+    renderDiceSlots(Number(diceCountEl.value));
+  });
+}
+
+// Wire modal PIN controls to reuse existing handlers (map modal buttons to core functions)
+if(setPinBtnModal) setPinBtnModal.addEventListener('click', (e)=>{ e.preventDefault(); if(pinInputModal) pinInput.value = pinInputModal.value = pinInputModal.value; setPin(); });
+if(lockBtnModal) lockBtnModal.addEventListener('click', (e)=>{ e.preventDefault(); setLocked(true); updatePinUI(); if(pinMsgModal) pinMsgModal.textContent = 'Locked.'; });
+if(unlockBtnModal) unlockBtnModal.addEventListener('click', async (e)=>{ e.preventDefault(); if(pinInputModal) pinInput.value = pinInputModal.value; await checkPinAndUnlock(); if(pinMsgModal) pinMsgModal.textContent = pinMsg.textContent; });
+if(pinInputModal) pinInputModal.addEventListener('keyup', async (e)=>{ if(e.key === 'Enter'){ pinInput.value = pinInputModal.value; await checkPinAndUnlock(); if(pinMsgModal) pinMsgModal.textContent = pinMsg.textContent; } });
+
+// Keep modal and primary PIN message text in sync by observing changes to pinMsg
+const pinMsgObserver = new MutationObserver(()=>{
+  if(pinMsgModal) pinMsgModal.textContent = pinMsg.textContent;
+});
+if(pinMsg) pinMsgObserver.observe(pinMsg, {childList:true,characterData:true,subtree:true});
 
 rollBtn.addEventListener('click', ()=>{
   rollDice();
