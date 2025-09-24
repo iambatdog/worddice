@@ -439,8 +439,8 @@ function updatePinUI(){
   // disable checkboxes when locked (apply to both primary and modal lists)
   Array.from(document.querySelectorAll('#safe-list input, #safe-list-modal input')).forEach(i=>i.disabled = locked);
   // primary buttons
-  lockBtn.style.display = locked ? 'none' : '';
-  unlockBtn.style.display = locked ? '' : 'none';
+  if(lockBtn) lockBtn.style.display = locked ? 'none' : '';
+  if(unlockBtn) unlockBtn.style.display = locked ? '' : 'none';
   // modal buttons (if present)
   if(lockBtnModal) lockBtnModal.style.display = locked ? 'none' : '';
   if(unlockBtnModal) unlockBtnModal.style.display = locked ? '' : 'none';
