@@ -46,6 +46,34 @@ ICONS.forEach(ic => {
   }
 });
 
+// floating standards button element reference (may be gated by lock state)
+const floatingStandardsBtn = document.getElementById('floating-standards-btn');
+
+// Ensure teacher/content standards buttons respond even if DOMContentLoaded fired earlier.
+// This wiring is done immediately so the floating button reliably opens the standards panel.
+// Floating standards button (bottom-right) opens a dedicated standards-only modal
+const standardsModal = document.getElementById('standards-modal');
+const standardsClose = document.getElementById('standards-close');
+const standardsBackdrop = document.getElementById('standards-backdrop');
+if(floatingStandardsBtn && standardsModal){
+  floatingStandardsBtn.addEventListener('click', (e)=>{
+    e.preventDefault();
+    standardsModal.hidden = false;
+    // trap focus inside the standards modal
+    setTimeout(()=>{ startFocusTrap(standardsModal); }, 60);
+    // render the standards table and reset details
+    renderStandardsTable();
+    const det = document.getElementById('standards-detail'); if(det){ det.style.display='none'; det.textContent='Click a row to see details.'; det.setAttribute('tabindex','-1'); }
+    // scroll the table into view
+    const sec = standardsModal.querySelector('.modal-body'); if(sec) sec.scrollIntoView({behavior:'smooth', block:'center'});
+  });
+}
+// close handlers for standards modal
+if(standardsClose) standardsClose.addEventListener('click', (e)=>{ e.preventDefault(); if(standardsModal){ standardsModal.hidden = true; stopFocusTrap(); } });
+if(standardsBackdrop) standardsBackdrop.addEventListener('click', ()=>{ if(standardsModal){ standardsModal.hidden = true; stopFocusTrap(); } });
+// allow Esc to close standards modal
+window.addEventListener('keydown', (e)=>{ if(e.key === 'Escape'){ if(standardsModal && !standardsModal.hidden){ standardsModal.hidden = true; stopFocusTrap(); } } });
+
 // Raster manifest (optional): load available raster outputs (webp/png) so the UI
 // can prefer high-quality raster images when present. Expected structure:
 // {
@@ -156,6 +184,39 @@ let SAFE_ICONS = ICONS.filter(ic => SAFE_OBJECTS.includes(ic.id));
 
 // Grade band persistence key
 const LS_GRADE_BAND = 'wd_grade_band';
+
+// Standards mapping data
+const STANDARDS_DATA = [
+  { band: 'K–2', id: 'k2', focus: 'Simple, concrete nouns', standard: 'W.K.3 – W.2.3', skills: 'Sequencing, describing, beginning–middle–end', details: `Grades K–2 (Simple & Familiar)\n\nPrompt Set: cat, dog, tree, rainbow, bike, cake, etc.\n\nRelevant Standards:\nCCSS.ELA-LITERACY.W.K.3 / W.1.3 / W.2.3: Use a combination of drawing, dictating, and writing to narrate a single event or several events, tell about the events in order, and provide a reaction.\n\nHow prompts help:\nSimple, concrete nouns help students focus on describing familiar objects. Prompts allow for short sequential stories and support story structure: beginning–middle–end.`},
+  { band: '3–5', id: 'g35', focus: 'Fantasy & adventure objects/settings', standard: 'W.3.3 – W.5.3', skills: 'Dialogue, transitions, problem/solution', details: `Grades 3–5 (Imaginative Adventure)\n\nPrompt Set: dragon, castle, map, spaceship, magic potion, key, volcano, etc.\n\nRelevant Standards:\nCCSS.ELA-LITERACY.W.3.3 – W.5.3: Write narratives to develop real or imagined experiences using descriptive details, clear event sequences, and dialogue.\n\nHow prompts help:\nFantasy/sci-fi objects encourage creative invention and push students toward problem + solution; great for practicing transitions.`},
+  { band: '6–8', id: 'g68', focus: 'Mystery & conflict imagery', standard: 'W.6.3 – W.8.3', skills: 'Pacing, sensory detail, suspense, “show don’t tell”', details: `Grades 6–8 (Mystery & Conflict)\n\nPrompt Set: torn photograph, locked door, footprints, candle, broken bridge, hidden passageway, storm at sea, etc.\n\nRelevant Standards:\nCCSS.ELA-LITERACY.W.6.3 – W.8.3: Write narratives with effective technique, relevant descriptive details, and well-structured event sequences.\n\nHow prompts help:\n“Mystery” imagery encourages conflict and suspense; students practice pacing and use sensory language to capture action.`},
+  { band: '9–12', id: 'g912', focus: 'Symbolic & atmospheric prompts', standard: 'W.9-10.3 – W.11-12.3', skills: 'Thematic depth, point of view, reflection, symbolism', details: `Grades 9–12 (Symbolic & Atmospheric)\n\nPrompt Set: crashed spaceship with tracks, abandoned carnival, cathedral ruins, portal in the sky, torn flag, glowing artifact, etc.\n\nRelevant Standards:\nCCSS.ELA-LITERACY.W.9-10.3 / W.11-12.3: Write narratives to develop real or imagined experiences with well-chosen details, structured event sequences, and reflection.\n\nHow prompts help:\nSymbolic/atmospheric images encourage interpretation and theme; prompts foster genre exploration and reflective or symbolic endings.`}
+];
+
+function renderStandardsTable(){
+  const container = document.getElementById('standards-table-container');
+  if(!container) return;
+  container.innerHTML = '';
+  const table = document.createElement('table');
+  table.className = 'standards-table';
+  const thead = document.createElement('thead');
+  thead.innerHTML = '<tr><th>Grade Band</th><th>Prompt Focus</th><th>Writing Standard Focus</th><th>Skills Developed</th></tr>';
+  table.appendChild(thead);
+  const tbody = document.createElement('tbody');
+  STANDARDS_DATA.forEach(row => {
+    const tr = document.createElement('tr');
+    tr.dataset.id = row.id;
+    tr.innerHTML = `<td><strong>${row.band}</strong></td><td>${row.focus}</td><td>${row.standard}</td><td>${row.skills}</td>`;
+    tr.addEventListener('click', ()=>{
+      const detail = document.getElementById('standards-detail');
+      if(detail){ detail.textContent = row.details; detail.style.display = 'block'; detail.focus && detail.focus(); }
+    });
+    tbody.appendChild(tr);
+  });
+  table.appendChild(tbody);
+  container.appendChild(table);
+}
+
 
 // Grade presets mapping: provided example labels mapped to icon ids when available in ICONS.
 // The presets below are the user's example lists; we'll match by label (case-insensitive, ignoring punctuation)
@@ -362,9 +423,9 @@ function startFocusTrap(modal){
 }
 
 function _focusInEnforcer(e){
-  const modal = document.getElementById('settings-modal');
+  // find any visible modal (settings or standards)
+  const modal = document.querySelector('.modal:not([hidden])');
   if(!modal) return;
-  if(modal.hidden) return;
   if(!modal.contains(e.target)){
     // move focus to the first focusable inside
     const focusable = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), [tabindex]:not([tabindex="-1"])';
@@ -414,24 +475,26 @@ function setLocked(val){
   localStorage.setItem(LS_LOCKED, val ? '1' : '0');
 }
 
-async function checkPinAndUnlock(){
-  const input = (pinInput.value||'').trim();
-  if(!input){ pinMsg.textContent = 'Enter a PIN to unlock.'; return false; }
+// Accept an optional `inputValue` so callers can pass a value directly (modal or inline)
+async function checkPinAndUnlock(inputValue){
+  const input = (typeof inputValue === 'string' ? inputValue : (pinInput && pinInput.value) || '').trim();
+  if(!input){ if(pinMsg) pinMsg.textContent = 'Enter a PIN to unlock.'; return false; }
   const stored = localStorage.getItem(LS_PIN_HASH);
-  if(!stored){ pinMsg.textContent = 'No PIN set. Use Set PIN to create one.'; return false; }
+  if(!stored){ if(pinMsg) pinMsg.textContent = 'No PIN set. Use Set PIN to create one.'; return false; }
   const h = await sha256Hex(input);
-  if(h === stored){ setLocked(false); updatePinUI(); pinMsg.textContent = 'Unlocked.'; return true; }
-  pinMsg.textContent = 'Incorrect PIN.'; return false;
+  if(h === stored){ setLocked(false); updatePinUI(); if(pinMsg) pinMsg.textContent = 'Unlocked.'; return true; }
+  if(pinMsg) pinMsg.textContent = 'Incorrect PIN.'; return false;
 }
 
-async function setPin(){
-  const input = (pinInput.value||'').trim();
-  if(!input){ pinMsg.textContent = 'Enter a PIN to set.'; return; }
+// Accept optional `inputValue` so modal handlers can pass the modal input directly
+async function setPin(inputValue){
+  const input = (typeof inputValue === 'string' ? inputValue : (pinInput && pinInput.value) || '').trim();
+  if(!input){ if(pinMsg) pinMsg.textContent = 'Enter a PIN to set.'; return; }
   const h = await sha256Hex(input);
   localStorage.setItem(LS_PIN_HASH, h);
   setLocked(true);
   updatePinUI();
-  pinMsg.textContent = 'PIN set and panel locked.';
+  if(pinMsg) pinMsg.textContent = 'PIN set and panel locked.';
 }
 
 function updatePinUI(){
@@ -444,7 +507,48 @@ function updatePinUI(){
   // modal buttons (if present)
   if(lockBtnModal) lockBtnModal.style.display = locked ? 'none' : '';
   if(unlockBtnModal) unlockBtnModal.style.display = locked ? '' : 'none';
+
+  // also update floating standards button visibility depending on lock state
+  try{ updateFloatingStandardsVisibility(); }catch(e){}
 }
+
+// Show the floating standards button only when the session is unlocked (teacher present).
+function updateFloatingStandardsVisibility(){
+  try{
+    if(!floatingStandardsBtn) return;
+    if(isLocked()){
+      floatingStandardsBtn.style.display = 'none';
+      floatingStandardsBtn.setAttribute('aria-hidden','true');
+    } else {
+      floatingStandardsBtn.style.display = '';
+      floatingStandardsBtn.removeAttribute('aria-hidden');
+    }
+  }catch(e){}
+}
+
+// Show/hide teacher standards section when settings modal opens
+function showTeacherStandardsSection(show){
+  const sec = document.getElementById('teacher-standards-section');
+  const btn = document.getElementById('teacher-icon');
+  if(!sec) return;
+  sec.style.display = show ? 'block' : 'none';
+  if(btn) btn.style.display = show ? 'inline-flex' : 'none';
+}
+
+// Hook into modal open to render standards table lazily
+document.addEventListener('DOMContentLoaded', ()=>{
+  const settingsBtn = document.getElementById('settings-btn');
+  const settingsModal = document.getElementById('settings-modal');
+  if(settingsBtn && settingsModal){
+    settingsBtn.addEventListener('click', ()=>{
+      // when modal opens, keep teacher section hidden until the teacher button is clicked
+      showTeacherStandardsSection(false);
+      // clear detail area
+      const detail = document.getElementById('standards-detail');
+      if(detail){ detail.style.display='none'; detail.textContent='Click the teacher icon to view standards.'; }
+    });
+  }
+});
 
 function renderSafeListUI(){
   // Determine the primary container to render into: prefer the inline safe list if present,
@@ -515,11 +619,12 @@ async function init(){
   safeListContainer = safeListContainer || document.getElementById('safe-list');
   safePanel = safePanel || document.getElementById('safe-list-panel');
   layoutToggle = layoutToggle || document.getElementById('layout-toggle');
-  pinInput = pinInput || document.getElementById('pin-input');
-  setPinBtn = setPinBtn || document.getElementById('set-pin-btn');
-  lockBtn = lockBtn || document.getElementById('lock-btn');
-  unlockBtn = unlockBtn || document.getElementById('unlock-btn');
-  pinMsg = pinMsg || document.getElementById('pin-msg');
+  // If primary (inline) PIN controls are not present, fall back to modal controls so handlers work.
+  pinInput = pinInput || document.getElementById('pin-input') || pinInputModal || document.getElementById('pin-input-modal');
+  setPinBtn = setPinBtn || document.getElementById('set-pin-btn') || setPinBtnModal || document.getElementById('set-pin-btn-modal');
+  lockBtn = lockBtn || document.getElementById('lock-btn') || lockBtnModal || document.getElementById('lock-btn-modal');
+  unlockBtn = unlockBtn || document.getElementById('unlock-btn') || unlockBtnModal || document.getElementById('unlock-btn-modal');
+  pinMsg = pinMsg || document.getElementById('pin-msg') || pinMsgModal || document.getElementById('pin-msg-modal');
 
   renderSafeListUI();
   checkRepeatWarning();
@@ -533,6 +638,8 @@ async function init(){
   }catch(e){}
   renderDiceSlots(Number(diceCountEl.value));
   updatePinUI();
+  // ensure floating standards button visibility matches current lock state
+  try{ updateFloatingStandardsVisibility(); }catch(e){}
   // restore previous roll/kept state if present
   restoreLastRoll();
 
@@ -545,7 +652,7 @@ async function init(){
     // restore selection
     const savedBand = localStorage.getItem(LS_GRADE_BAND);
     if(gradeSelect && savedBand) gradeSelect.value = savedBand;
-  if(applyBtn && gradeSelect){ applyBtn.addEventListener('click', ()=>{ console.log('Apply Grade Preset clicked', gradeSelect.value); applyGradePreset(gradeSelect.value); const note = document.getElementById('grade-preset-note'); if(note){ note.textContent = 'Applying preset...'; note.style.display = 'block'; setTimeout(()=>{ note.style.display = 'none'; }, 2000); } }); }
+  if(applyBtn && gradeSelect){ applyBtn.addEventListener('click', ()=>{ applyGradePreset(gradeSelect.value); const note = document.getElementById('grade-preset-note'); if(note){ note.textContent = 'Applying grade preset...'; note.style.display = 'block'; setTimeout(()=>{ note.style.display = 'none'; }, 2000); } }); }
     if(applyPlaceBtn && gradeSelect){ applyPlaceBtn.addEventListener('click', ()=>{ applyGradePresetWithPlaceholders(gradeSelect.value); }); }
     if(previewBtn && gradeSelect){ previewBtn.addEventListener('click', ()=>{ previewGradePreset(gradeSelect.value); }); }
   }catch(e){}
@@ -851,10 +958,10 @@ if(layoutToggleModal){
 }
 
 // Wire modal PIN controls to reuse existing handlers (map modal buttons to core functions)
-if(setPinBtnModal) setPinBtnModal.addEventListener('click', (e)=>{ e.preventDefault(); if(pinInputModal) pinInput.value = pinInputModal.value = pinInputModal.value; setPin(); });
+if(setPinBtnModal) setPinBtnModal.addEventListener('click', (e)=>{ e.preventDefault(); const v = pinInputModal ? (pinInputModal.value||'') : ''; setPin(v); if(pinMsgModal) pinMsgModal.textContent = pinMsg.textContent; });
 if(lockBtnModal) lockBtnModal.addEventListener('click', (e)=>{ e.preventDefault(); setLocked(true); updatePinUI(); if(pinMsgModal) pinMsgModal.textContent = 'Locked.'; });
-if(unlockBtnModal) unlockBtnModal.addEventListener('click', async (e)=>{ e.preventDefault(); if(pinInputModal) pinInput.value = pinInputModal.value; await checkPinAndUnlock(); if(pinMsgModal) pinMsgModal.textContent = pinMsg.textContent; });
-if(pinInputModal) pinInputModal.addEventListener('keyup', async (e)=>{ if(e.key === 'Enter'){ pinInput.value = pinInputModal.value; await checkPinAndUnlock(); if(pinMsgModal) pinMsgModal.textContent = pinMsg.textContent; } });
+if(unlockBtnModal) unlockBtnModal.addEventListener('click', async (e)=>{ e.preventDefault(); const v = pinInputModal ? (pinInputModal.value||'') : ''; await checkPinAndUnlock(v); if(pinMsgModal) pinMsgModal.textContent = pinMsg.textContent; });
+if(pinInputModal) pinInputModal.addEventListener('keyup', async (e)=>{ if(e.key === 'Enter'){ const v = pinInputModal ? (pinInputModal.value||'') : ''; await checkPinAndUnlock(v); if(pinMsgModal) pinMsgModal.textContent = pinMsg.textContent; } });
 
 // Keep modal and primary PIN message text in sync by observing changes to pinMsg
 const pinMsgObserver = new MutationObserver(()=>{
@@ -999,10 +1106,10 @@ window.addEventListener('resize', ()=>{
 rollBtn.addEventListener('keyup', (e)=>{ if(e.key==='Enter') { if(!hasRolled){ rollDice(); hasRolled = true; rollBtn.textContent = 'Reroll Dice'; rollBtn.classList.add('reroll'); } else { rerollUnkeptDice(); } } });
 
 // PIN button wiring
-if(setPinBtn) setPinBtn.addEventListener('click', (e)=>{ e.preventDefault(); setPin(); });
-if(lockBtn) lockBtn.addEventListener('click', (e)=>{ e.preventDefault(); setLocked(true); updatePinUI(); pinMsg.textContent = 'Locked.'; });
-if(unlockBtn) unlockBtn.addEventListener('click', async (e)=>{ e.preventDefault(); await checkPinAndUnlock(); });
-if(pinInput) pinInput.addEventListener('keyup', async (e)=>{ if(e.key === 'Enter'){ await checkPinAndUnlock(); } });
+if(setPinBtn) setPinBtn.addEventListener('click', (e)=>{ e.preventDefault(); const v = pinInput ? (pinInput.value||'') : ''; setPin(v); });
+if(lockBtn) lockBtn.addEventListener('click', (e)=>{ e.preventDefault(); setLocked(true); updatePinUI(); if(pinMsg) pinMsg.textContent = 'Locked.'; });
+if(unlockBtn) unlockBtn.addEventListener('click', async (e)=>{ e.preventDefault(); const v = pinInput ? (pinInput.value||'') : ''; await checkPinAndUnlock(v); });
+if(pinInput) pinInput.addEventListener('keyup', async (e)=>{ if(e.key === 'Enter'){ const v = pinInput ? (pinInput.value||'') : ''; await checkPinAndUnlock(v); } });
 
 // ensure UI lock state reflects stored value on load
 updatePinUI();

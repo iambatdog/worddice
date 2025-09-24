@@ -32,6 +32,21 @@
           </svg>
         </button>
       </div>
+      <!-- Standards-only modal -->
+      <div id="standards-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="standards-title" hidden>
+        <div class="modal-backdrop" id="standards-backdrop"></div>
+        <div class="modal-panel" role="document">
+          <header class="modal-header">
+            <h3 id="standards-title">Standards mapping</h3>
+            <button id="standards-close" class="btn ghost" aria-label="Close standards">✕</button>
+          </header>
+          <div class="modal-body">
+            <div class="note">Click a row to view full mapping details.</div>
+            <div id="standards-table-container" style="margin-top:8px;"></div>
+            <div id="standards-detail" class="note" style="margin-top:10px;display:none;white-space:pre-wrap;"></div>
+          </div>
+        </div>
+      </div>
   <div id="roll-helper" class="note" hidden></div>
   <!-- ARIA live region for screen reader announcements -->
   <div id="aria-announcer" aria-live="polite" aria-atomic="true" class="sr-only"></div>
@@ -49,15 +64,22 @@
         <small>Designed for kids — simple and safe.</small>
       </footer>
     </main>
+    <!-- Floating Content Standards button -->
+    <button id="floating-standards-btn" class="btn ghost floating-standards" aria-label="Content Standards">Content Standards</button>
       <!-- Settings modal (hidden by default). Reuses existing safe-list and PIN controls inside for management. -->
       <div id="settings-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="settings-title" hidden>
         <div class="modal-backdrop" id="settings-backdrop"></div>
         <div class="modal-panel" role="document">
           <header class="modal-header">
             <h3 id="settings-title">Settings</h3>
+            <button id="teacher-icon" class="btn ghost" aria-label="Teacher standards" title="Teacher standards" aria-expanded="false" hidden>
+              <!-- simple teacher icon -->
+              <svg width="20" height="20" viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2a3 3 0 00-3 3v1H7a2 2 0 00-2 2v2h14V8a2 2 0 00-2-2h-2V5a3 3 0 00-3-3zm-6 12v5a2 2 0 002 2h10a2 2 0 002-2v-5H6z"></path></svg>
+            </button>
             <button id="settings-close" class="btn ghost" aria-label="Close settings">✕</button>
           </header>
           <div class="modal-body">
+            <!-- Content Standards now available via floating button on the main page -->
             <div class="modal-section">
               <label for="layout-toggle-modal" style="display:flex;align-items:center;gap:8px">
                 <input type="checkbox" id="layout-toggle-modal" />
@@ -81,6 +103,8 @@
               </div>
               <div id="grade-preset-note" class="note" style="margin-top:8px;display:none"></div>
             </div>
+            <hr />
+            <!-- Standards mapping is available via the floating Content Standards button. -->
             <hr />
             <div class="modal-section">
               <h4>Allowed images</h4>
