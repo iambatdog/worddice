@@ -154,6 +154,80 @@ let SAFE_OBJECTS = loadSafeObjects();
 SAFE_OBJECTS = SAFE_OBJECTS.filter(id => ICONS.some(ic => ic.id === id));
 let SAFE_ICONS = ICONS.filter(ic => SAFE_OBJECTS.includes(ic.id));
 
+// Grade band persistence key
+const LS_GRADE_BAND = 'wd_grade_band';
+
+// Grade presets mapping: provided example labels mapped to icon ids when available in ICONS.
+// The presets below are the user's example lists; we'll match by label (case-insensitive, ignoring punctuation)
+const GRADE_PRESETS_RAW = {
+  k2: [
+    'Cat','Dog','Bird','Fish','Tree','Flower','Sun','Moon','Rainbow','Ball','Kite','Bike','House','School bus','Book','Birthday cake','Ice cream cone','Teddy bear','Swing set','Slide','Train','Boat','Airplane','Firetruck','Farm','Cow','Horse','Duck','Shoe','Star'
+  ],
+  g35: [
+    'Dragon','Castle','Treasure chest','Pirate ship','Volcano','Cave','Wizard hat','Magic wand','Map with X','Robot','Spaceship','Alien','Knight','Princess','Crown','Giant','Witch’s broom','Potion bottle','Lighthouse','Bridge','Storm cloud','Tent','Compass','Locked treasure box','Sword','Ice mountain','Desert with cactus','Timepiece','Key','Talking animal'
+  ],
+  g68: [
+    'Torn photograph','Trail of footprints','Broken sword','Flickering candle','Locked door','Mask','Dark forest','Shadowy figure','Cracked mirror','Storm at sea','Empty chair','Secret letter','Rope ladder','Strange symbol on wall','Abandoned house','Old key','Robot arm','Spacesuit helmet','Hidden passageway','Mysterious box','Hourglass with sand running out','Shipwreck','Rusted gate','Lantern','Spiderweb','Faded map','Broken bridge','Strange footprints in snow','Black cat watching','Discarded glove'
+  ],
+  g912: [
+    'Crashed spaceship with tracks leading away','Train disappearing into fog','Abandoned carnival ride','Cathedral ruins with vines','Ancient book glowing faintly','Lighthouse beam cutting through storm','Empty theater stage','Clock tower at midnight','Shadow of a person but no one there','Deserted city street at night','Statue missing its head','Blood-red moon','Frozen lake with cracks forming','Bridge leading to nowhere','Old photograph half burned','Chessboard mid-game','Mask cracked in half','Broken stained-glass window','Crows circling a barren tree','Abandoned school hallway','Spiral staircase vanishing into darkness','Suitcase left in the middle of a road','Overgrown garden with forgotten fountain','Torn flag waving','Key glowing faintly in the dark','Candle flickering in a cavern','Giant shadow cast on a wall','Portal opening in the sky','Ship stranded on dry land','Writing on a wall that no one understands'
+  ]
+};
+
+// Utility: normalize a label to match against ICONS labels/ids
+function normalizeLabel(s){
+  return String(s || '').toLowerCase().replace(/[’'".,:()]/g,'').replace(/\s+/g,' ').trim();
+}
+
+// Build a map from normalized label -> icon id for quick matching
+const ICON_LABEL_MAP = {};
+ICONS.forEach(ic=>{ ICON_LABEL_MAP[normalizeLabel(ic.label)] = ic.id; ICON_LABEL_MAP[normalizeLabel(ic.id)] = ic.id; });
+
+// Build a preset (array of icon ids) for a given band by matching available ICONS
+function buildPresetForBand(band){
+  const raw = GRADE_PRESETS_RAW[band] || [];
+  const ids = [];
+  raw.forEach(item => {
+    const key = normalizeLabel(item.replace(/with x/ig,'with x').replace(/’/g, "'"));
+    const matched = ICON_LABEL_MAP[key];
+    if(matched && !ids.includes(matched)) ids.push(matched);
+  });
+  // If preset is empty, fallback to DEFAULT_SAFE_OBJECTS subset
+  if(ids.length === 0) return DEFAULT_SAFE_OBJECTS.slice(0, Math.min(20, ICONS.length));
+  return ids;
+}
+
+// Apply preset into SAFE_OBJECTS (respecting lock if set)
+function applyGradePreset(band){
+  if(isLocked()){
+    // show message in modal area
+    if(pinMsgModal) pinMsgModal.textContent = 'Unlock to change grade presets.';
+    return false;
+  }
+  const ids = buildPresetForBand(band);
+  SAFE_OBJECTS = ids.slice();
+  SAFE_ICONS = ICONS.filter(ic => SAFE_OBJECTS.includes(ic.id));
+  saveSafeObjects(SAFE_OBJECTS);
+  try{ localStorage.setItem(LS_GRADE_BAND, band); }catch(e){}
+  renderSafeListUI();
+  checkRepeatWarning();
+  if(pinMsgModal) pinMsgModal.textContent = 'Grade preset applied.';
+  return true;
+}
+
+// Preview preset without applying (shows a short note with matched labels)
+function previewGradePreset(band){
+  const ids = buildPresetForBand(band);
+  const labels = ids.map(id => (ICONS.find(ic=>ic.id===id)||{label:id}).label);
+  const note = document.getElementById('grade-preset-note');
+  if(note){
+    if(labels.length === 0) { note.textContent = 'No matching icons found for this grade band.'; }
+    else note.textContent = 'Preset includes: ' + labels.slice(0,12).join(', ') + (labels.length > 12 ? '...' : '');
+    note.style.display = 'block';
+    setTimeout(()=>{ note.style.display = 'none'; }, 6000);
+  }
+}
+
 // persisted state keys
 const LS_KEPT = 'wd_kept_indices';
 const LS_LAST_PICKS = 'wd_last_picks';
@@ -399,6 +473,18 @@ async function init(){
   updatePinUI();
   // restore previous roll/kept state if present
   restoreLastRoll();
+
+  // wire grade band controls (if present)
+  try{
+    const gradeSelect = document.getElementById('grade-band-select');
+    const applyBtn = document.getElementById('apply-grade-preset');
+    const previewBtn = document.getElementById('preview-grade-preset');
+    // restore selection
+    const savedBand = localStorage.getItem(LS_GRADE_BAND);
+    if(gradeSelect && savedBand) gradeSelect.value = savedBand;
+    if(applyBtn && gradeSelect){ applyBtn.addEventListener('click', ()=>{ applyGradePreset(gradeSelect.value); }); }
+    if(previewBtn && gradeSelect){ previewBtn.addEventListener('click', ()=>{ previewGradePreset(gradeSelect.value); }); }
+  }catch(e){}
 }
 
 // start

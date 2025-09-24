@@ -66,6 +66,22 @@
             </div>
             <hr />
             <div class="modal-section">
+              <h4>Grade level presets</h4>
+              <div class="note">Choose a grade band to quickly apply a teacher-approved preset of images. You can edit the allowed images afterwards.</div>
+              <div style="display:flex;gap:8px;align-items:center;margin-top:8px;flex-wrap:wrap">
+                <select id="grade-band-select" aria-label="Select grade band">
+                  <option value="k2">Grade K–2 (Simple & Familiar)</option>
+                  <option value="g35">Grades 3–5 (Imaginative Adventure)</option>
+                  <option value="g68">Grades 6–8 (Mystery & Conflict)</option>
+                  <option value="g912">Grades 9–12 (Symbolic & Atmospheric)</option>
+                </select>
+                <button id="apply-grade-preset" class="btn">Apply Grade Preset</button>
+                <button id="preview-grade-preset" class="btn ghost">Preview</button>
+              </div>
+              <div id="grade-preset-note" class="note" style="margin-top:8px;display:none"></div>
+            </div>
+            <hr />
+            <div class="modal-section">
               <h4>Allowed images</h4>
               <div class="note">Use the checkboxes to control which images can appear on dice. Changes are saved in your browser.</div>
               <!-- Reuse #safe-list here for the modal editor -->
