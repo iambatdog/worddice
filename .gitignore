@@ -1,0 +1,13 @@
+# Exclude backup files and common OS artifacts
+*.bak
+.DS_Store
+Thumbs.db
+
+# Node modules (if you add node tooling later)
+node_modules/
+
+# Generated raster files (optional)
+assets/raster/**
+
+# logs
+.log

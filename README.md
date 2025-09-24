@@ -43,3 +43,19 @@ python3 -m http.server 8000
 
 - Accessibility: aria labels and live regions are used so screen readers announce changes.
 # worddice
+
+How to run locally
+
+The site is a static bundle. For best results serve the project folder over HTTP (some browsers block local file access for SVGs).
+
+From the project root (macOS / Linux):
+
+```bash
+# Python 3 simple server
+python3 -m http.server 8000
+
+# Then open http://localhost:8000 in your browser
+```
+
+You can also use any static server (http-server, serve, etc.) if you prefer.
+
