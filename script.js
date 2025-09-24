@@ -116,6 +116,7 @@ function createIconNode(icon, opts={}){
 }
 
 const diceArea = document.getElementById('dice-area');
+const layoutToggle = document.getElementById('layout-toggle');
 const diceCountEl = document.getElementById('dice-count');
 const rollBtn = document.getElementById('roll-btn');
 const newPromptBtn = document.getElementById('new-prompt');
@@ -261,6 +262,14 @@ async function init(){
   SAFE_ICONS = ICONS.filter(ic => SAFE_OBJECTS.includes(ic.id));
   renderSafeListUI();
   checkRepeatWarning();
+  // apply saved layout preference (optional horizontal layout)
+  try{
+    const val = localStorage.getItem('wd_layout_horizontal');
+    if(val === '1'){
+      diceArea.classList.add('horizontal');
+      if(layoutToggle) layoutToggle.checked = true;
+    }
+  }catch(e){}
   renderDiceSlots(Number(diceCountEl.value));
   updatePinUI();
 }
@@ -394,6 +403,17 @@ diceCountEl.addEventListener('change', ()=>{
   renderDiceSlots(Number(diceCountEl.value));
   checkRepeatWarning();
 });
+
+// layout toggle wiring
+if(layoutToggle){
+  layoutToggle.addEventListener('change', (e)=>{
+    const on = !!e.target.checked;
+    if(on) diceArea.classList.add('horizontal'); else diceArea.classList.remove('horizontal');
+    try{ localStorage.setItem('wd_layout_horizontal', on ? '1' : '0'); }catch(e){}
+    // re-render to ensure grid-template-columns get recalculated
+    renderDiceSlots(Number(diceCountEl.value));
+  });
+}
 
 rollBtn.addEventListener('click', ()=>{
   rollDice();
