@@ -81,6 +81,15 @@ window.addEventListener('keydown', (e)=>{ if(e.key === 'Escape'){ if(standardsMo
 //   ...
 // }
 let RASTER_MANIFEST = {};
+
+// Band palettes used for runtime-composed placeholder wrappers. Keep in JS for logic but
+// styling is applied via CSS classes (.band-*) so designers can override colors in styles.css
+const BAND_PALETTES = {
+  k2: { bg:'#fffaf0', stripe:'#ffd8b3', chip:'#ffe7d6', stroke:'#ffd8b3', text:'#333' },
+  g35: { bg:'#f0fbff', stripe:'#bfefff', chip:'#dff6ff', stroke:'#bfefff', text:'#113344' },
+  g68: { bg:'#fff7fb', stripe:'#ffd1f0', chip:'#ffe7f5', stroke:'#ffd1f0', text:'#3c1033' },
+  g912: { bg:'#f3f7ff', stripe:'#cfe0ff', chip:'#e8f0ff', stroke:'#cfe0ff', text:'#102240' }
+};
 async function loadRasterManifest(){
   try{
     const res = await fetch('assets/raster/manifest.json', {cache: 'no-cache'});
@@ -126,17 +135,11 @@ function createIconNode(icon, opts={}){
       }
       if(matchedId){
         const matchedEntry = RASTER_MANIFEST && RASTER_MANIFEST[matchedId];
-        // build wrapper with background color to match the template look
-        const wrapper = document.createElement('div');
-        wrapper.style.display = 'inline-flex';
-        wrapper.style.alignItems = 'center';
-        wrapper.style.justifyContent = 'center';
-        wrapper.style.width = (opts.size ? opts.size+'px' : '96px');
-        wrapper.style.height = (opts.size ? opts.size+'px' : '96px');
-        wrapper.style.borderRadius = '12px';
-        wrapper.style.background = palette.bg;
-        wrapper.style.border = `6px solid ${palette.stroke}`;
-        wrapper.style.boxSizing = 'border-box';
+          // build wrapper and assign band class for centralized styling
+          const wrapper = document.createElement('div');
+          wrapper.className = `placeholder-wrapper band-${band}`;
+          // allow size hint to adjust CSS variables for width/height if provided
+          if(opts.size){ wrapper.style.width = opts.size + 'px'; wrapper.style.height = opts.size + 'px'; }
 
         if(matchedEntry && (matchedEntry.webp || matchedEntry.png)){
           const pic = document.createElement('picture');

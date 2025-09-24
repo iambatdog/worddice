@@ -105,6 +105,17 @@ select{padding:8px;border-radius:8px;border:1px solid #eee;background:#fff}
 .safe-item img, .safe-item picture, .safe-item .placeholder{width:64px;height:64px;display:inline-block}
 .safe-item picture img{width:100%;height:100%;object-fit:contain}
 
+/* Placeholder wrapper used for runtime-composed placeholders */
+.placeholder-wrapper{display:inline-flex;align-items:center;justify-content:center;border-radius:12px;box-sizing:border-box;width:96px;height:96px;padding:6px;overflow:hidden}
+.placeholder-wrapper img{width:80%;height:80%;object-fit:contain}
+.placeholder-wrapper .label{font-weight:700;text-align:center;padding:6px;color:var(--muted);font-size:0.95rem}
+
+/* Band-specific variants (colors kept small and overrideable via CSS variables) */
+.band-k2{background:var(--band-k2-bg,#fffaf0);border:6px solid var(--band-k2-stroke,#ffd8b3);color:var(--band-k2-text,#333)}
+.band-g35{background:var(--band-g35-bg,#f0fbff);border:6px solid var(--band-g35-stroke,#bfefff);color:var(--band-g35-text,#113344)}
+.band-g68{background:var(--band-g68-bg,#fff7fb);border:6px solid var(--band-g68-stroke,#ffd1f0);color:var(--band-g68-text,#3c1033)}
+.band-g912{background:var(--band-g912-bg,#f3f7ff);border:6px solid var(--band-g912-stroke,#cfe0ff);color:var(--band-g912-text,#102240)}
+
 /* Hover and focus style for better accessibility */
 .safe-item:hover, .safe-item:focus-within{
   outline: 3px solid rgba(255,107,107,0.22);
