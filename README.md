@@ -59,3 +59,28 @@ python3 -m http.server 8000
 
 You can also use any static server (http-server, serve, etc.) if you prefer.
 
+
+Contributing
+
+Thanks for considering contributing! Small projects like this appreciate clear, simple steps:
+
+- Run locally:
+	- Serve the project (see above) and open http://localhost:8000.
+- Make changes:
+	- Add or update icons in `assets/icons/` and update the `ICONS` array in `script.js`.
+	- If you add raster images, place them under `assets/raster/<size>/` and update `assets/raster/manifest.json`.
+- Test:
+	- Reload the page and verify the safe-list, roll behavior, and prompts work as expected.
+- Commit & push:
+	- Stage changes: `git add -A`
+	- Commit: `git commit -m "Describe your change"`
+	- Push: `git push origin main`
+
+Development checklist
+
+1. Start a local server: `python3 -m http.server 8000`
+2. Open http://localhost:8000 and verify page loads
+3. Make a change (icon, text, CSS or JS)
+4. Run a quick smoke test: roll dice, toggle the safe list, set/unlock PIN
+5. Commit and push your change
+
