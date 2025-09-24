@@ -1,0 +1,54 @@
+{
+  "# Note": "This manifest is optional — add raster files into assets/raster/<size>/ and update paths below. The app will prefer these when present.",
+  "tree": {
+    "webp": [
+      { "path": "assets/raster/256/tree.webp", "width": 256 },
+      { "path": "assets/raster/512/tree.webp", "width": 512 },
+      { "path": "assets/raster/1024/tree.webp", "width": 1024 }
+    ],
+    "png": [
+      { "path": "assets/raster/256/tree.png", "width": 256 },
+      { "path": "assets/raster/512/tree.png", "width": 512 }
+    ]
+  },
+  "car": {
+    "webp": [
+      { "path": "assets/raster/256/car.webp", "width": 256 },
+      { "path": "assets/raster/512/car.webp", "width": 512 }
+    ],
+    "png": [
+      { "path": "assets/raster/512/car.png", "width": 512 }
+    ]
+  },
+  "book": {
+    "webp": [
+      { "path": "assets/raster/256/book.webp", "width": 256 },
+      { "path": "assets/raster/1024/book.webp", "width": 1024 }
+    ],
+    "png": []
+  },
+  "rocket": {
+    "webp": [
+      { "path": "assets/raster/256/rocket.webp", "width": 256 },
+      { "path": "assets/raster/512/rocket.webp", "width": 512 }
+    ],
+    "png": [
+      { "path": "assets/raster/512/rocket.png", "width": 512 }
+    ]
+  },
+  "balloon": {
+    "webp": [
+      { "path": "assets/raster/256/balloon.webp", "width": 256 }
+    ],
+    "png": []
+  },
+  "treasure-chest": {
+    "webp": [
+      { "path": "assets/raster/512/treasure-chest.webp", "width": 512 },
+      { "path": "assets/raster/1024/treasure-chest.webp", "width": 1024 }
+    ],
+    "png": [
+      { "path": "assets/raster/1024/treasure-chest.png", "width": 1024 }
+    ]
+  }
+}

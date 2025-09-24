@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Word Dice</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1 class="title">Word Dice</h1>
+      <p class="lead">Roll the dice to get fun picture prompts for writing!</p>
+
+      <div class="controls">
+        <label for="dice-count">How many dice?</label>
+        <select id="dice-count" aria-label="Number of dice">
+          <option value="2">2</option>
+          <option value="3" selected>3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+        </select>
+
+        <button id="roll-btn" class="btn">Roll Dice</button>
+        <button id="new-prompt" class="btn ghost">New Prompt</button>
+      </div>
+
+      <details id="safe-list-panel" class="safe-list-panel">
+        <summary>Allowed images (click to edit)</summary>
+        <div id="safe-list" class="safe-list"></div>
+        <p class="note">Selected items are the only images that can appear on dice. Selections are saved in your browser.</p>
+        <div class="pin-controls">
+          <input id="pin-input" type="password" placeholder="Enter teacher PIN" aria-label="Teacher PIN" />
+          <button id="set-pin-btn" class="btn ghost">Set PIN</button>
+          <button id="lock-btn" class="btn">Lock</button>
+          <button id="unlock-btn" class="btn ghost" style="display:none">Unlock</button>
+          <p id="pin-msg" class="note" aria-live="polite"></p>
+        </div>
+      </details>
+
+      <section id="dice-area" class="dice-area" aria-live="polite">
+        <!-- dice slots inserted here -->
+      </section>
+
+      <section id="prompt" class="prompt" aria-live="polite">
+        <h2>Writing Prompt</h2>
+        <p id="prompt-text">Roll the dice to get a new writing prompt.</p>
+      </section>
+
+      <footer class="footer">
+        <small>Designed for kids — simple and safe.</small>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+	<rect width="64" height="64" rx="12" fill="#fffbf2"/>
+	<g transform="translate(6,8)" stroke-linecap="round" stroke-linejoin="round">
+		<rect x="4" y="8" width="48" height="40" rx="6" fill="#fff" stroke="#ffe5c7" stroke-width="1.6"/>
+		<!-- map folds -->
+		<path d="M14 18 C22 26, 30 14, 40 22" stroke="#d08a4a" stroke-width="1.6" fill="none"/>
+		<path d="M12 30 L20 26 L28 34" stroke="#c86b6b" stroke-width="1.4" fill="none"/>
+		<!-- X marks the spot -->
+		<g transform="translate(36,30)">
+			<circle cx="0" cy="0" r="5" fill="#ffdede" stroke="#ff9a9a" stroke-width="1"/>
+			<path d="M-3 -3 L3 3 M3 -3 L-3 3" stroke="#ff6b6b" stroke-width="1.2" stroke-linecap="round"/>
+		</g>
+	</g>
+</svg>

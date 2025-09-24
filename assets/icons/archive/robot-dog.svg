@@ -1,0 +1,17 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+	<rect width="64" height="64" rx="12" fill="#f6fff9"/>
+	<g transform="translate(8,14)" stroke-linecap="round" stroke-linejoin="round">
+		<!-- body -->
+		<rect x="6" y="14" width="36" height="16" rx="4" fill="#cfe8ff" stroke="#9fc0e6" stroke-width="1.2"/>
+		<!-- head -->
+		<rect x="12" y="6" width="10" height="10" rx="2" fill="#dff4ff" stroke="#9fc0e6" stroke-width="1"/>
+		<!-- ears -->
+		<rect x="10" y="4" width="3" height="4" rx="1" fill="#9fc0e6"/>
+		<rect x="22" y="4" width="3" height="4" rx="1" fill="#9fc0e6"/>
+		<!-- wheel-like paws -->
+		<circle cx="14" cy="34" r="3" fill="#fff" stroke="#9fc0e6" stroke-width="1"/>
+		<circle cx="30" cy="34" r="3" fill="#fff" stroke="#9fc0e6" stroke-width="1"/>
+		<!-- simple eye -->
+		<circle cx="16" cy="10" r="1.2" fill="#153"/>
+	</g>
+</svg>
