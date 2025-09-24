@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <style>
+      .bg { fill: #fffaf0; stroke: #ffd8b3; stroke-width: 12px; rx: 80px; }
+      .chip { fill: #ffe7d6; stroke: #ffd8b3; stroke-width: 6px; }
+      .label { font-family: Inter, Arial, sans-serif; font-size: 64px; font-weight: 700; fill: #333; text-anchor: middle; }
+    </style>
+  </defs>
+  <rect width="100%" height="100%" rx="80" fill="#fffaf0" stroke="#ffd8b3" stroke-width="12"/>
+  <g transform="translate(0,140)">
+    <circle cx="512" cy="140" r="90" class="chip" />
+    <rect x="460" y="100" width="104" height="80" rx="8" ry="8" fill="#fff" stroke="#ffd8b3" stroke-width="6"/>
+  </g>
+  <text id="label" x="512" y="560" class="label">Lantern</text>
+</svg>

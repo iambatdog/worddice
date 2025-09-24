@@ -1,54 +1,362 @@
 {
-  "# Note": "This manifest is optional — add raster files into assets/raster/<size>/ and update paths below. The app will prefer these when present.",
-  "tree": {
-    "webp": [
-      { "path": "assets/raster/256/tree.webp", "width": 256 },
-      { "path": "assets/raster/512/tree.webp", "width": 512 },
-      { "path": "assets/raster/1024/tree.webp", "width": 1024 }
-    ],
-    "png": [
-      { "path": "assets/raster/256/tree.png", "width": 256 },
-      { "path": "assets/raster/512/tree.png", "width": 512 }
-    ]
+  "placeholder-k2-0-cat": {
+    "svg": "assets/icons/placeholder-k2-0-cat.svg"
   },
-  "car": {
-    "webp": [
-      { "path": "assets/raster/256/car.webp", "width": 256 },
-      { "path": "assets/raster/512/car.webp", "width": 512 }
-    ],
-    "png": [
-      { "path": "assets/raster/512/car.png", "width": 512 }
-    ]
+  "placeholder-k2-1-dog": {
+    "svg": "assets/icons/placeholder-k2-1-dog.svg"
   },
-  "book": {
-    "webp": [
-      { "path": "assets/raster/256/book.webp", "width": 256 },
-      { "path": "assets/raster/1024/book.webp", "width": 1024 }
-    ],
-    "png": []
+  "placeholder-k2-2-bird": {
+    "svg": "assets/icons/placeholder-k2-2-bird.svg"
   },
-  "rocket": {
-    "webp": [
-      { "path": "assets/raster/256/rocket.webp", "width": 256 },
-      { "path": "assets/raster/512/rocket.webp", "width": 512 }
-    ],
-    "png": [
-      { "path": "assets/raster/512/rocket.png", "width": 512 }
-    ]
+  "placeholder-k2-3-fish": {
+    "svg": "assets/icons/placeholder-k2-3-fish.svg"
   },
-  "balloon": {
-    "webp": [
-      { "path": "assets/raster/256/balloon.webp", "width": 256 }
-    ],
-    "png": []
+  "placeholder-k2-4-tree": {
+    "svg": "assets/icons/placeholder-k2-4-tree.svg"
   },
-  "treasure-chest": {
-    "webp": [
-      { "path": "assets/raster/512/treasure-chest.webp", "width": 512 },
-      { "path": "assets/raster/1024/treasure-chest.webp", "width": 1024 }
-    ],
-    "png": [
-      { "path": "assets/raster/1024/treasure-chest.png", "width": 1024 }
-    ]
+  "placeholder-k2-5-flower": {
+    "svg": "assets/icons/placeholder-k2-5-flower.svg"
+  },
+  "placeholder-k2-6-sun": {
+    "svg": "assets/icons/placeholder-k2-6-sun.svg"
+  },
+  "placeholder-k2-7-moon": {
+    "svg": "assets/icons/placeholder-k2-7-moon.svg"
+  },
+  "placeholder-k2-8-rainbow": {
+    "svg": "assets/icons/placeholder-k2-8-rainbow.svg"
+  },
+  "placeholder-k2-9-ball": {
+    "svg": "assets/icons/placeholder-k2-9-ball.svg"
+  },
+  "placeholder-k2-10-kite": {
+    "svg": "assets/icons/placeholder-k2-10-kite.svg"
+  },
+  "placeholder-k2-11-bike": {
+    "svg": "assets/icons/placeholder-k2-11-bike.svg"
+  },
+  "placeholder-k2-12-house": {
+    "svg": "assets/icons/placeholder-k2-12-house.svg"
+  },
+  "placeholder-k2-13-school-bus": {
+    "svg": "assets/icons/placeholder-k2-13-school-bus.svg"
+  },
+  "placeholder-k2-14-book": {
+    "svg": "assets/icons/placeholder-k2-14-book.svg"
+  },
+  "placeholder-k2-15-birthday-cake": {
+    "svg": "assets/icons/placeholder-k2-15-birthday-cake.svg"
+  },
+  "placeholder-k2-16-ice-cream-cone": {
+    "svg": "assets/icons/placeholder-k2-16-ice-cream-cone.svg"
+  },
+  "placeholder-k2-17-teddy-bear": {
+    "svg": "assets/icons/placeholder-k2-17-teddy-bear.svg"
+  },
+  "placeholder-k2-18-swing-set": {
+    "svg": "assets/icons/placeholder-k2-18-swing-set.svg"
+  },
+  "placeholder-k2-19-slide": {
+    "svg": "assets/icons/placeholder-k2-19-slide.svg"
+  },
+  "placeholder-k2-20-train": {
+    "svg": "assets/icons/placeholder-k2-20-train.svg"
+  },
+  "placeholder-k2-21-boat": {
+    "svg": "assets/icons/placeholder-k2-21-boat.svg"
+  },
+  "placeholder-k2-22-airplane": {
+    "svg": "assets/icons/placeholder-k2-22-airplane.svg"
+  },
+  "placeholder-k2-23-firetruck": {
+    "svg": "assets/icons/placeholder-k2-23-firetruck.svg"
+  },
+  "placeholder-k2-24-farm": {
+    "svg": "assets/icons/placeholder-k2-24-farm.svg"
+  },
+  "placeholder-k2-25-cow": {
+    "svg": "assets/icons/placeholder-k2-25-cow.svg"
+  },
+  "placeholder-k2-26-horse": {
+    "svg": "assets/icons/placeholder-k2-26-horse.svg"
+  },
+  "placeholder-k2-27-duck": {
+    "svg": "assets/icons/placeholder-k2-27-duck.svg"
+  },
+  "placeholder-k2-28-shoe": {
+    "svg": "assets/icons/placeholder-k2-28-shoe.svg"
+  },
+  "placeholder-k2-29-star": {
+    "svg": "assets/icons/placeholder-k2-29-star.svg"
+  },
+  "placeholder-g35-0-dragon": {
+    "svg": "assets/icons/placeholder-g35-0-dragon.svg"
+  },
+  "placeholder-g35-1-castle": {
+    "svg": "assets/icons/placeholder-g35-1-castle.svg"
+  },
+  "placeholder-g35-2-treasure-chest": {
+    "svg": "assets/icons/placeholder-g35-2-treasure-chest.svg"
+  },
+  "placeholder-g35-3-pirate-ship": {
+    "svg": "assets/icons/placeholder-g35-3-pirate-ship.svg"
+  },
+  "placeholder-g35-4-volcano": {
+    "svg": "assets/icons/placeholder-g35-4-volcano.svg"
+  },
+  "placeholder-g35-5-cave": {
+    "svg": "assets/icons/placeholder-g35-5-cave.svg"
+  },
+  "placeholder-g35-6-wizard-hat": {
+    "svg": "assets/icons/placeholder-g35-6-wizard-hat.svg"
+  },
+  "placeholder-g35-7-magic-wand": {
+    "svg": "assets/icons/placeholder-g35-7-magic-wand.svg"
+  },
+  "placeholder-g35-8-map-with-x": {
+    "svg": "assets/icons/placeholder-g35-8-map-with-x.svg"
+  },
+  "placeholder-g35-9-robot": {
+    "svg": "assets/icons/placeholder-g35-9-robot.svg"
+  },
+  "placeholder-g35-10-spaceship": {
+    "svg": "assets/icons/placeholder-g35-10-spaceship.svg"
+  },
+  "placeholder-g35-11-alien": {
+    "svg": "assets/icons/placeholder-g35-11-alien.svg"
+  },
+  "placeholder-g35-12-knight": {
+    "svg": "assets/icons/placeholder-g35-12-knight.svg"
+  },
+  "placeholder-g35-13-princess": {
+    "svg": "assets/icons/placeholder-g35-13-princess.svg"
+  },
+  "placeholder-g35-14-crown": {
+    "svg": "assets/icons/placeholder-g35-14-crown.svg"
+  },
+  "placeholder-g35-15-giant": {
+    "svg": "assets/icons/placeholder-g35-15-giant.svg"
+  },
+  "placeholder-g35-16-witchs-broom": {
+    "svg": "assets/icons/placeholder-g35-16-witchs-broom.svg"
+  },
+  "placeholder-g35-17-potion-bottle": {
+    "svg": "assets/icons/placeholder-g35-17-potion-bottle.svg"
+  },
+  "placeholder-g35-18-lighthouse": {
+    "svg": "assets/icons/placeholder-g35-18-lighthouse.svg"
+  },
+  "placeholder-g35-19-bridge": {
+    "svg": "assets/icons/placeholder-g35-19-bridge.svg"
+  },
+  "placeholder-g35-20-storm-cloud": {
+    "svg": "assets/icons/placeholder-g35-20-storm-cloud.svg"
+  },
+  "placeholder-g35-21-tent": {
+    "svg": "assets/icons/placeholder-g35-21-tent.svg"
+  },
+  "placeholder-g35-22-compass": {
+    "svg": "assets/icons/placeholder-g35-22-compass.svg"
+  },
+  "placeholder-g35-23-locked-treasure-box": {
+    "svg": "assets/icons/placeholder-g35-23-locked-treasure-box.svg"
+  },
+  "placeholder-g35-24-sword": {
+    "svg": "assets/icons/placeholder-g35-24-sword.svg"
+  },
+  "placeholder-g35-25-ice-mountain": {
+    "svg": "assets/icons/placeholder-g35-25-ice-mountain.svg"
+  },
+  "placeholder-g35-26-desert-with-cactus": {
+    "svg": "assets/icons/placeholder-g35-26-desert-with-cactus.svg"
+  },
+  "placeholder-g35-27-timepiece": {
+    "svg": "assets/icons/placeholder-g35-27-timepiece.svg"
+  },
+  "placeholder-g35-28-key": {
+    "svg": "assets/icons/placeholder-g35-28-key.svg"
+  },
+  "placeholder-g35-29-talking-animal": {
+    "svg": "assets/icons/placeholder-g35-29-talking-animal.svg"
+  },
+  "placeholder-g68-0-torn-photograph": {
+    "svg": "assets/icons/placeholder-g68-0-torn-photograph.svg"
+  },
+  "placeholder-g68-1-trail-of-footprints": {
+    "svg": "assets/icons/placeholder-g68-1-trail-of-footprints.svg"
+  },
+  "placeholder-g68-2-broken-sword": {
+    "svg": "assets/icons/placeholder-g68-2-broken-sword.svg"
+  },
+  "placeholder-g68-3-flickering-candle": {
+    "svg": "assets/icons/placeholder-g68-3-flickering-candle.svg"
+  },
+  "placeholder-g68-4-locked-door": {
+    "svg": "assets/icons/placeholder-g68-4-locked-door.svg"
+  },
+  "placeholder-g68-5-mask": {
+    "svg": "assets/icons/placeholder-g68-5-mask.svg"
+  },
+  "placeholder-g68-6-dark-forest": {
+    "svg": "assets/icons/placeholder-g68-6-dark-forest.svg"
+  },
+  "placeholder-g68-7-shadowy-figure": {
+    "svg": "assets/icons/placeholder-g68-7-shadowy-figure.svg"
+  },
+  "placeholder-g68-8-cracked-mirror": {
+    "svg": "assets/icons/placeholder-g68-8-cracked-mirror.svg"
+  },
+  "placeholder-g68-9-storm-at-sea": {
+    "svg": "assets/icons/placeholder-g68-9-storm-at-sea.svg"
+  },
+  "placeholder-g68-10-empty-chair": {
+    "svg": "assets/icons/placeholder-g68-10-empty-chair.svg"
+  },
+  "placeholder-g68-11-secret-letter": {
+    "svg": "assets/icons/placeholder-g68-11-secret-letter.svg"
+  },
+  "placeholder-g68-12-rope-ladder": {
+    "svg": "assets/icons/placeholder-g68-12-rope-ladder.svg"
+  },
+  "placeholder-g68-13-strange-symbol-on-wall": {
+    "svg": "assets/icons/placeholder-g68-13-strange-symbol-on-wall.svg"
+  },
+  "placeholder-g68-14-abandoned-house": {
+    "svg": "assets/icons/placeholder-g68-14-abandoned-house.svg"
+  },
+  "placeholder-g68-15-old-key": {
+    "svg": "assets/icons/placeholder-g68-15-old-key.svg"
+  },
+  "placeholder-g68-16-robot-arm": {
+    "svg": "assets/icons/placeholder-g68-16-robot-arm.svg"
+  },
+  "placeholder-g68-17-spacesuit-helmet": {
+    "svg": "assets/icons/placeholder-g68-17-spacesuit-helmet.svg"
+  },
+  "placeholder-g68-18-hidden-passageway": {
+    "svg": "assets/icons/placeholder-g68-18-hidden-passageway.svg"
+  },
+  "placeholder-g68-19-mysterious-box": {
+    "svg": "assets/icons/placeholder-g68-19-mysterious-box.svg"
+  },
+  "placeholder-g68-20-hourglass-with-sand-running-out": {
+    "svg": "assets/icons/placeholder-g68-20-hourglass-with-sand-running-out.svg"
+  },
+  "placeholder-g68-21-shipwreck": {
+    "svg": "assets/icons/placeholder-g68-21-shipwreck.svg"
+  },
+  "placeholder-g68-22-rusted-gate": {
+    "svg": "assets/icons/placeholder-g68-22-rusted-gate.svg"
+  },
+  "placeholder-g68-23-lantern": {
+    "svg": "assets/icons/placeholder-g68-23-lantern.svg"
+  },
+  "placeholder-g68-24-spiderweb": {
+    "svg": "assets/icons/placeholder-g68-24-spiderweb.svg"
+  },
+  "placeholder-g68-25-faded-map": {
+    "svg": "assets/icons/placeholder-g68-25-faded-map.svg"
+  },
+  "placeholder-g68-26-broken-bridge": {
+    "svg": "assets/icons/placeholder-g68-26-broken-bridge.svg"
+  },
+  "placeholder-g68-27-strange-footprints-in-snow": {
+    "svg": "assets/icons/placeholder-g68-27-strange-footprints-in-snow.svg"
+  },
+  "placeholder-g68-28-black-cat-watching": {
+    "svg": "assets/icons/placeholder-g68-28-black-cat-watching.svg"
+  },
+  "placeholder-g68-29-discarded-glove": {
+    "svg": "assets/icons/placeholder-g68-29-discarded-glove.svg"
+  },
+  "placeholder-g912-0-crashed-spaceship-with-tracks-leading-away": {
+    "svg": "assets/icons/placeholder-g912-0-crashed-spaceship-with-tracks-leading-away.svg"
+  },
+  "placeholder-g912-1-train-disappearing-into-fog": {
+    "svg": "assets/icons/placeholder-g912-1-train-disappearing-into-fog.svg"
+  },
+  "placeholder-g912-2-abandoned-carnival-ride": {
+    "svg": "assets/icons/placeholder-g912-2-abandoned-carnival-ride.svg"
+  },
+  "placeholder-g912-3-cathedral-ruins-with-vines": {
+    "svg": "assets/icons/placeholder-g912-3-cathedral-ruins-with-vines.svg"
+  },
+  "placeholder-g912-4-ancient-book-glowing-faintly": {
+    "svg": "assets/icons/placeholder-g912-4-ancient-book-glowing-faintly.svg"
+  },
+  "placeholder-g912-5-lighthouse-beam-cutting-through-storm": {
+    "svg": "assets/icons/placeholder-g912-5-lighthouse-beam-cutting-through-storm.svg"
+  },
+  "placeholder-g912-6-empty-theater-stage": {
+    "svg": "assets/icons/placeholder-g912-6-empty-theater-stage.svg"
+  },
+  "placeholder-g912-7-clock-tower-at-midnight": {
+    "svg": "assets/icons/placeholder-g912-7-clock-tower-at-midnight.svg"
+  },
+  "placeholder-g912-8-shadow-of-a-person-but-no-one-there": {
+    "svg": "assets/icons/placeholder-g912-8-shadow-of-a-person-but-no-one-there.svg"
+  },
+  "placeholder-g912-9-deserted-city-street-at-night": {
+    "svg": "assets/icons/placeholder-g912-9-deserted-city-street-at-night.svg"
+  },
+  "placeholder-g912-10-statue-missing-its-head": {
+    "svg": "assets/icons/placeholder-g912-10-statue-missing-its-head.svg"
+  },
+  "placeholder-g912-11-blood-red-moon": {
+    "svg": "assets/icons/placeholder-g912-11-blood-red-moon.svg"
+  },
+  "placeholder-g912-12-frozen-lake-with-cracks-forming": {
+    "svg": "assets/icons/placeholder-g912-12-frozen-lake-with-cracks-forming.svg"
+  },
+  "placeholder-g912-13-bridge-leading-to-nowhere": {
+    "svg": "assets/icons/placeholder-g912-13-bridge-leading-to-nowhere.svg"
+  },
+  "placeholder-g912-14-old-photograph-half-burned": {
+    "svg": "assets/icons/placeholder-g912-14-old-photograph-half-burned.svg"
+  },
+  "placeholder-g912-15-chessboard-mid-game": {
+    "svg": "assets/icons/placeholder-g912-15-chessboard-mid-game.svg"
+  },
+  "placeholder-g912-16-mask-cracked-in-half": {
+    "svg": "assets/icons/placeholder-g912-16-mask-cracked-in-half.svg"
+  },
+  "placeholder-g912-17-broken-stained-glass-window": {
+    "svg": "assets/icons/placeholder-g912-17-broken-stained-glass-window.svg"
+  },
+  "placeholder-g912-18-crows-circling-a-barren-tree": {
+    "svg": "assets/icons/placeholder-g912-18-crows-circling-a-barren-tree.svg"
+  },
+  "placeholder-g912-19-abandoned-school-hallway": {
+    "svg": "assets/icons/placeholder-g912-19-abandoned-school-hallway.svg"
+  },
+  "placeholder-g912-20-spiral-staircase-vanishing-into-darkness": {
+    "svg": "assets/icons/placeholder-g912-20-spiral-staircase-vanishing-into-darkness.svg"
+  },
+  "placeholder-g912-21-suitcase-left-in-the-middle-of-a-road": {
+    "svg": "assets/icons/placeholder-g912-21-suitcase-left-in-the-middle-of-a-road.svg"
+  },
+  "placeholder-g912-22-overgrown-garden-with-forgotten-fountain": {
+    "svg": "assets/icons/placeholder-g912-22-overgrown-garden-with-forgotten-fountain.svg"
+  },
+  "placeholder-g912-23-torn-flag-waving": {
+    "svg": "assets/icons/placeholder-g912-23-torn-flag-waving.svg"
+  },
+  "placeholder-g912-24-key-glowing-faintly-in-the-dark": {
+    "svg": "assets/icons/placeholder-g912-24-key-glowing-faintly-in-the-dark.svg"
+  },
+  "placeholder-g912-25-candle-flickering-in-a-cavern": {
+    "svg": "assets/icons/placeholder-g912-25-candle-flickering-in-a-cavern.svg"
+  },
+  "placeholder-g912-26-giant-shadow-cast-on-a-wall": {
+    "svg": "assets/icons/placeholder-g912-26-giant-shadow-cast-on-a-wall.svg"
+  },
+  "placeholder-g912-27-portal-opening-in-the-sky": {
+    "svg": "assets/icons/placeholder-g912-27-portal-opening-in-the-sky.svg"
+  },
+  "placeholder-g912-28-ship-stranded-on-dry-land": {
+    "svg": "assets/icons/placeholder-g912-28-ship-stranded-on-dry-land.svg"
+  },
+  "placeholder-g912-29-writing-on-a-wall-that-no-one-understands": {
+    "svg": "assets/icons/placeholder-g912-29-writing-on-a-wall-that-no-one-understands.svg"
   }
 }
