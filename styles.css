@@ -36,11 +36,11 @@ label{font-weight:600}
 select{padding:8px;border-radius:8px;border:1px solid #eee;background:#fff}
 .btn{background:var(--accent);color:#fff;padding:10px 14px;border-radius:10px;border:none;cursor:pointer;font-weight:700}
 .btn.ghost{background:transparent;color:var(--accent);border:2px solid var(--accent)}
-.dice-area{display:grid;gap:14px;padding:14px;border-radius:12px;background:linear-gradient(180deg,#fff,#fffaf0);min-height:160px;align-items:center;justify-content:center;/* lay out in columns so items fill rows; JS will set grid-template-columns */grid-auto-flow:column;grid-template-rows:repeat(2,1fr);grid-auto-columns:minmax(96px,1fr);}
+.dice-area{display:grid;gap:14px;padding:14px;border-radius:12px;background:linear-gradient(180deg,#fff,#fffaf0);min-height:160px;align-items:center;justify-content:center;/* lay out left-to-right so JS can set number of columns */grid-auto-flow:row;grid-template-rows:repeat(2,1fr);grid-auto-columns:minmax(96px,1fr);}
 .dice-area.small{grid-auto-columns:minmax(96px,1fr);}
 .dice-area.medium{grid-auto-columns:minmax(84px,1fr);}
 .dice-area.large{grid-auto-columns:minmax(72px,1fr);}
-.die{width:100%;max-width:120px;aspect-ratio:1/1;background:#f9fafb;border-radius:14px;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(0,0,0,0.08);position:relative;overflow:hidden;transition:transform .18s ease, box-shadow .18s ease}
+.die{width:100%;/* allow grid to size tiles by column width */aspect-ratio:1/1;background:#f9fafb;border-radius:14px;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(0,0,0,0.08);position:relative;overflow:hidden;transition:transform .18s ease, box-shadow .18s ease}
 .die:hover{transform:translateY(-4px);box-shadow:0 14px 28px rgba(0,0,0,0.12)}
 .die .face{width:86%;height:86%;background:#fff;border-radius:12px;display:flex;align-items:center;justify-content:center;padding:6px}
 .die img{width:86%;height:86%;object-fit:contain}
