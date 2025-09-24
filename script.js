@@ -475,24 +475,26 @@ function setLocked(val){
   localStorage.setItem(LS_LOCKED, val ? '1' : '0');
 }
 
-async function checkPinAndUnlock(){
-  const input = (pinInput.value||'').trim();
-  if(!input){ pinMsg.textContent = 'Enter a PIN to unlock.'; return false; }
+// Accept an optional `inputValue` so callers can pass a value directly (modal or inline)
+async function checkPinAndUnlock(inputValue){
+  const input = (typeof inputValue === 'string' ? inputValue : (pinInput && pinInput.value) || '').trim();
+  if(!input){ if(pinMsg) pinMsg.textContent = 'Enter a PIN to unlock.'; return false; }
   const stored = localStorage.getItem(LS_PIN_HASH);
-  if(!stored){ pinMsg.textContent = 'No PIN set. Use Set PIN to create one.'; return false; }
+  if(!stored){ if(pinMsg) pinMsg.textContent = 'No PIN set. Use Set PIN to create one.'; return false; }
   const h = await sha256Hex(input);
-  if(h === stored){ setLocked(false); updatePinUI(); pinMsg.textContent = 'Unlocked.'; return true; }
-  pinMsg.textContent = 'Incorrect PIN.'; return false;
+  if(h === stored){ setLocked(false); updatePinUI(); if(pinMsg) pinMsg.textContent = 'Unlocked.'; return true; }
+  if(pinMsg) pinMsg.textContent = 'Incorrect PIN.'; return false;
 }
 
-async function setPin(){
-  const input = (pinInput.value||'').trim();
-  if(!input){ pinMsg.textContent = 'Enter a PIN to set.'; return; }
+// Accept optional `inputValue` so modal handlers can pass the modal input directly
+async function setPin(inputValue){
+  const input = (typeof inputValue === 'string' ? inputValue : (pinInput && pinInput.value) || '').trim();
+  if(!input){ if(pinMsg) pinMsg.textContent = 'Enter a PIN to set.'; return; }
   const h = await sha256Hex(input);
   localStorage.setItem(LS_PIN_HASH, h);
   setLocked(true);
   updatePinUI();
-  pinMsg.textContent = 'PIN set and panel locked.';
+  if(pinMsg) pinMsg.textContent = 'PIN set and panel locked.';
 }
 
 function updatePinUI(){
@@ -617,11 +619,12 @@ async function init(){
   safeListContainer = safeListContainer || document.getElementById('safe-list');
   safePanel = safePanel || document.getElementById('safe-list-panel');
   layoutToggle = layoutToggle || document.getElementById('layout-toggle');
-  pinInput = pinInput || document.getElementById('pin-input');
-  setPinBtn = setPinBtn || document.getElementById('set-pin-btn');
-  lockBtn = lockBtn || document.getElementById('lock-btn');
-  unlockBtn = unlockBtn || document.getElementById('unlock-btn');
-  pinMsg = pinMsg || document.getElementById('pin-msg');
+  // If primary (inline) PIN controls are not present, fall back to modal controls so handlers work.
+  pinInput = pinInput || document.getElementById('pin-input') || pinInputModal || document.getElementById('pin-input-modal');
+  setPinBtn = setPinBtn || document.getElementById('set-pin-btn') || setPinBtnModal || document.getElementById('set-pin-btn-modal');
+  lockBtn = lockBtn || document.getElementById('lock-btn') || lockBtnModal || document.getElementById('lock-btn-modal');
+  unlockBtn = unlockBtn || document.getElementById('unlock-btn') || unlockBtnModal || document.getElementById('unlock-btn-modal');
+  pinMsg = pinMsg || document.getElementById('pin-msg') || pinMsgModal || document.getElementById('pin-msg-modal');
 
   renderSafeListUI();
   checkRepeatWarning();
@@ -955,10 +958,10 @@ if(layoutToggleModal){
 }
 
 // Wire modal PIN controls to reuse existing handlers (map modal buttons to core functions)
-if(setPinBtnModal) setPinBtnModal.addEventListener('click', (e)=>{ e.preventDefault(); if(pinInputModal) pinInput.value = pinInputModal.value = pinInputModal.value; setPin(); });
+if(setPinBtnModal) setPinBtnModal.addEventListener('click', (e)=>{ e.preventDefault(); const v = pinInputModal ? (pinInputModal.value||'') : ''; setPin(v); if(pinMsgModal) pinMsgModal.textContent = pinMsg.textContent; });
 if(lockBtnModal) lockBtnModal.addEventListener('click', (e)=>{ e.preventDefault(); setLocked(true); updatePinUI(); if(pinMsgModal) pinMsgModal.textContent = 'Locked.'; });
-if(unlockBtnModal) unlockBtnModal.addEventListener('click', async (e)=>{ e.preventDefault(); if(pinInputModal) pinInput.value = pinInputModal.value; await checkPinAndUnlock(); if(pinMsgModal) pinMsgModal.textContent = pinMsg.textContent; });
-if(pinInputModal) pinInputModal.addEventListener('keyup', async (e)=>{ if(e.key === 'Enter'){ pinInput.value = pinInputModal.value; await checkPinAndUnlock(); if(pinMsgModal) pinMsgModal.textContent = pinMsg.textContent; } });
+if(unlockBtnModal) unlockBtnModal.addEventListener('click', async (e)=>{ e.preventDefault(); const v = pinInputModal ? (pinInputModal.value||'') : ''; await checkPinAndUnlock(v); if(pinMsgModal) pinMsgModal.textContent = pinMsg.textContent; });
+if(pinInputModal) pinInputModal.addEventListener('keyup', async (e)=>{ if(e.key === 'Enter'){ const v = pinInputModal ? (pinInputModal.value||'') : ''; await checkPinAndUnlock(v); if(pinMsgModal) pinMsgModal.textContent = pinMsg.textContent; } });
 
 // Keep modal and primary PIN message text in sync by observing changes to pinMsg
 const pinMsgObserver = new MutationObserver(()=>{
@@ -1103,10 +1106,10 @@ window.addEventListener('resize', ()=>{
 rollBtn.addEventListener('keyup', (e)=>{ if(e.key==='Enter') { if(!hasRolled){ rollDice(); hasRolled = true; rollBtn.textContent = 'Reroll Dice'; rollBtn.classList.add('reroll'); } else { rerollUnkeptDice(); } } });
 
 // PIN button wiring
-if(setPinBtn) setPinBtn.addEventListener('click', (e)=>{ e.preventDefault(); setPin(); });
-if(lockBtn) lockBtn.addEventListener('click', (e)=>{ e.preventDefault(); setLocked(true); updatePinUI(); pinMsg.textContent = 'Locked.'; });
-if(unlockBtn) unlockBtn.addEventListener('click', async (e)=>{ e.preventDefault(); await checkPinAndUnlock(); });
-if(pinInput) pinInput.addEventListener('keyup', async (e)=>{ if(e.key === 'Enter'){ await checkPinAndUnlock(); } });
+if(setPinBtn) setPinBtn.addEventListener('click', (e)=>{ e.preventDefault(); const v = pinInput ? (pinInput.value||'') : ''; setPin(v); });
+if(lockBtn) lockBtn.addEventListener('click', (e)=>{ e.preventDefault(); setLocked(true); updatePinUI(); if(pinMsg) pinMsg.textContent = 'Locked.'; });
+if(unlockBtn) unlockBtn.addEventListener('click', async (e)=>{ e.preventDefault(); const v = pinInput ? (pinInput.value||'') : ''; await checkPinAndUnlock(v); });
+if(pinInput) pinInput.addEventListener('keyup', async (e)=>{ if(e.key === 'Enter'){ const v = pinInput ? (pinInput.value||'') : ''; await checkPinAndUnlock(v); } });
 
 // ensure UI lock state reflects stored value on load
 updatePinUI();
