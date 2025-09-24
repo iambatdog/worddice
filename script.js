@@ -46,16 +46,17 @@ ICONS.forEach(ic => {
   }
 });
 
+// floating standards button element reference (may be gated by lock state)
+const floatingStandardsBtn = document.getElementById('floating-standards-btn');
+
 // Ensure teacher/content standards buttons respond even if DOMContentLoaded fired earlier.
-// This wiring is done immediately so the button in the modal always toggles the standards panel.
-// in-modal content button wiring removed — floating button is now the sole trigger for standards
+// This wiring is done immediately so the floating button reliably opens the standards panel.
 // Floating standards button (bottom-right) opens a dedicated standards-only modal
-const floatingBtn = document.getElementById('floating-standards-btn');
 const standardsModal = document.getElementById('standards-modal');
 const standardsClose = document.getElementById('standards-close');
 const standardsBackdrop = document.getElementById('standards-backdrop');
-if(floatingBtn && standardsModal){
-  floatingBtn.addEventListener('click', (e)=>{
+if(floatingStandardsBtn && standardsModal){
+  floatingStandardsBtn.addEventListener('click', (e)=>{
     e.preventDefault();
     standardsModal.hidden = false;
     // trap focus inside the standards modal
@@ -504,6 +505,23 @@ function updatePinUI(){
   // modal buttons (if present)
   if(lockBtnModal) lockBtnModal.style.display = locked ? 'none' : '';
   if(unlockBtnModal) unlockBtnModal.style.display = locked ? '' : 'none';
+
+  // also update floating standards button visibility depending on lock state
+  try{ updateFloatingStandardsVisibility(); }catch(e){}
+}
+
+// Show the floating standards button only when the session is unlocked (teacher present).
+function updateFloatingStandardsVisibility(){
+  try{
+    if(!floatingStandardsBtn) return;
+    if(isLocked()){
+      floatingStandardsBtn.style.display = 'none';
+      floatingStandardsBtn.setAttribute('aria-hidden','true');
+    } else {
+      floatingStandardsBtn.style.display = '';
+      floatingStandardsBtn.removeAttribute('aria-hidden');
+    }
+  }catch(e){}
 }
 
 // Show/hide teacher standards section when settings modal opens
@@ -617,6 +635,8 @@ async function init(){
   }catch(e){}
   renderDiceSlots(Number(diceCountEl.value));
   updatePinUI();
+  // ensure floating standards button visibility matches current lock state
+  try{ updateFloatingStandardsVisibility(); }catch(e){}
   // restore previous roll/kept state if present
   restoreLastRoll();
 
