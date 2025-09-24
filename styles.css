@@ -43,7 +43,7 @@ select{padding:8px;border-radius:8px;border:1px solid #eee;background:#fff}
 .die{width:100%;max-width:120px;aspect-ratio:1/1;background:#f9fafb;border-radius:14px;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(0,0,0,0.08);position:relative;overflow:hidden;transition:transform .18s ease, box-shadow .18s ease}
 .die:hover{transform:translateY(-4px);box-shadow:0 14px 28px rgba(0,0,0,0.12)}
 .die .face{width:86%;height:86%;background:#fff;border-radius:12px;display:flex;align-items:center;justify-content:center;padding:6px}
-.die img{width:78%;height:78%;object-fit:contain}
+.die img{width:86%;height:86%;object-fit:contain}
 
 /* Responsive rows: default 2 rows; small screens 1 row (stack vertically), wide screens 3 rows */
 @media (max-width:520px){
@@ -68,6 +68,12 @@ select{padding:8px;border-radius:8px;border:1px solid #eee;background:#fff}
 .safe-item{display:flex;align-items:center;gap:8px;background:#fff6ee;padding:6px 8px;border-radius:8px;border:1px solid #ffe5cc;flex:0 0 auto}
 .safe-item img, .safe-item picture, .safe-item .placeholder{width:64px;height:64px;display:inline-block}
 .safe-item picture img{width:100%;height:100%;object-fit:contain}
+
+/* Hover and focus style for better accessibility */
+.safe-item:hover, .safe-item:focus-within{
+  outline: 3px solid rgba(255,107,107,0.22);
+  box-shadow: 0 6px 16px rgba(255,107,107,0.06);
+}
 .safe-item svg{width:28px;height:28px}
 .note{margin-top:8px;color:var(--muted);font-size:0.9rem}
 
