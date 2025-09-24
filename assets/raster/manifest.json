@@ -1,362 +1,5522 @@
 {
   "placeholder-k2-0-cat": {
-    "svg": "assets/icons/placeholder-k2-0-cat.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-k2-0-cat-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-k2-0-cat-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-k2-0-cat-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-k2-0-cat-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-k2-0-cat-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-k2-0-cat-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-k2-0-cat-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-k2-0-cat-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-k2-0-cat-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-k2-0-cat-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-k2-1-dog": {
-    "svg": "assets/icons/placeholder-k2-1-dog.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-k2-1-dog-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-k2-1-dog-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-k2-1-dog-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-k2-1-dog-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-k2-1-dog-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-k2-1-dog-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-k2-1-dog-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-k2-1-dog-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-k2-1-dog-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-k2-1-dog-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-k2-2-bird": {
-    "svg": "assets/icons/placeholder-k2-2-bird.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-k2-2-bird-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-k2-2-bird-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-k2-2-bird-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-k2-2-bird-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-k2-2-bird-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-k2-2-bird-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-k2-2-bird-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-k2-2-bird-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-k2-2-bird-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-k2-2-bird-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-k2-3-fish": {
-    "svg": "assets/icons/placeholder-k2-3-fish.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-k2-3-fish-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-k2-3-fish-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-k2-3-fish-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-k2-3-fish-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-k2-3-fish-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-k2-3-fish-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-k2-3-fish-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-k2-3-fish-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-k2-3-fish-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-k2-3-fish-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-k2-4-tree": {
-    "svg": "assets/icons/placeholder-k2-4-tree.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-k2-4-tree-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-k2-4-tree-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-k2-4-tree-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-k2-4-tree-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-k2-4-tree-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-k2-4-tree-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-k2-4-tree-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-k2-4-tree-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-k2-4-tree-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-k2-4-tree-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-k2-5-flower": {
-    "svg": "assets/icons/placeholder-k2-5-flower.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-k2-5-flower-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-k2-5-flower-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-k2-5-flower-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-k2-5-flower-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-k2-5-flower-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-k2-5-flower-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-k2-5-flower-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-k2-5-flower-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-k2-5-flower-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-k2-5-flower-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-k2-6-sun": {
-    "svg": "assets/icons/placeholder-k2-6-sun.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-k2-6-sun-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-k2-6-sun-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-k2-6-sun-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-k2-6-sun-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-k2-6-sun-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-k2-6-sun-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-k2-6-sun-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-k2-6-sun-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-k2-6-sun-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-k2-6-sun-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-k2-7-moon": {
-    "svg": "assets/icons/placeholder-k2-7-moon.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-k2-7-moon-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-k2-7-moon-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-k2-7-moon-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-k2-7-moon-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-k2-7-moon-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-k2-7-moon-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-k2-7-moon-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-k2-7-moon-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-k2-7-moon-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-k2-7-moon-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-k2-8-rainbow": {
-    "svg": "assets/icons/placeholder-k2-8-rainbow.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-k2-8-rainbow-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-k2-8-rainbow-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-k2-8-rainbow-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-k2-8-rainbow-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-k2-8-rainbow-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-k2-8-rainbow-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-k2-8-rainbow-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-k2-8-rainbow-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-k2-8-rainbow-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-k2-8-rainbow-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-k2-9-ball": {
-    "svg": "assets/icons/placeholder-k2-9-ball.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-k2-9-ball-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-k2-9-ball-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-k2-9-ball-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-k2-9-ball-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-k2-9-ball-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-k2-9-ball-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-k2-9-ball-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-k2-9-ball-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-k2-9-ball-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-k2-9-ball-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-k2-10-kite": {
-    "svg": "assets/icons/placeholder-k2-10-kite.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-k2-10-kite-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-k2-10-kite-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-k2-10-kite-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-k2-10-kite-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-k2-10-kite-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-k2-10-kite-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-k2-10-kite-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-k2-10-kite-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-k2-10-kite-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-k2-10-kite-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-k2-11-bike": {
-    "svg": "assets/icons/placeholder-k2-11-bike.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-k2-11-bike-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-k2-11-bike-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-k2-11-bike-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-k2-11-bike-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-k2-11-bike-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-k2-11-bike-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-k2-11-bike-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-k2-11-bike-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-k2-11-bike-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-k2-11-bike-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-k2-12-house": {
-    "svg": "assets/icons/placeholder-k2-12-house.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-k2-12-house-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-k2-12-house-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-k2-12-house-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-k2-12-house-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-k2-12-house-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-k2-12-house-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-k2-12-house-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-k2-12-house-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-k2-12-house-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-k2-12-house-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-k2-13-school-bus": {
-    "svg": "assets/icons/placeholder-k2-13-school-bus.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-k2-13-school-bus-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-k2-13-school-bus-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-k2-13-school-bus-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-k2-13-school-bus-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-k2-13-school-bus-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-k2-13-school-bus-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-k2-13-school-bus-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-k2-13-school-bus-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-k2-13-school-bus-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-k2-13-school-bus-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-k2-14-book": {
-    "svg": "assets/icons/placeholder-k2-14-book.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-k2-14-book-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-k2-14-book-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-k2-14-book-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-k2-14-book-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-k2-14-book-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-k2-14-book-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-k2-14-book-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-k2-14-book-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-k2-14-book-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-k2-14-book-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-k2-15-birthday-cake": {
-    "svg": "assets/icons/placeholder-k2-15-birthday-cake.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-k2-15-birthday-cake-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-k2-15-birthday-cake-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-k2-15-birthday-cake-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-k2-15-birthday-cake-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-k2-15-birthday-cake-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-k2-15-birthday-cake-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-k2-15-birthday-cake-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-k2-15-birthday-cake-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-k2-15-birthday-cake-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-k2-15-birthday-cake-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-k2-16-ice-cream-cone": {
-    "svg": "assets/icons/placeholder-k2-16-ice-cream-cone.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-k2-16-ice-cream-cone-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-k2-16-ice-cream-cone-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-k2-16-ice-cream-cone-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-k2-16-ice-cream-cone-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-k2-16-ice-cream-cone-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-k2-16-ice-cream-cone-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-k2-16-ice-cream-cone-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-k2-16-ice-cream-cone-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-k2-16-ice-cream-cone-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-k2-16-ice-cream-cone-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-k2-17-teddy-bear": {
-    "svg": "assets/icons/placeholder-k2-17-teddy-bear.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-k2-17-teddy-bear-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-k2-17-teddy-bear-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-k2-17-teddy-bear-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-k2-17-teddy-bear-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-k2-17-teddy-bear-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-k2-17-teddy-bear-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-k2-17-teddy-bear-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-k2-17-teddy-bear-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-k2-17-teddy-bear-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-k2-17-teddy-bear-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-k2-18-swing-set": {
-    "svg": "assets/icons/placeholder-k2-18-swing-set.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-k2-18-swing-set-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-k2-18-swing-set-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-k2-18-swing-set-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-k2-18-swing-set-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-k2-18-swing-set-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-k2-18-swing-set-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-k2-18-swing-set-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-k2-18-swing-set-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-k2-18-swing-set-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-k2-18-swing-set-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-k2-19-slide": {
-    "svg": "assets/icons/placeholder-k2-19-slide.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-k2-19-slide-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-k2-19-slide-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-k2-19-slide-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-k2-19-slide-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-k2-19-slide-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-k2-19-slide-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-k2-19-slide-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-k2-19-slide-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-k2-19-slide-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-k2-19-slide-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-k2-20-train": {
-    "svg": "assets/icons/placeholder-k2-20-train.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-k2-20-train-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-k2-20-train-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-k2-20-train-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-k2-20-train-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-k2-20-train-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-k2-20-train-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-k2-20-train-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-k2-20-train-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-k2-20-train-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-k2-20-train-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-k2-21-boat": {
-    "svg": "assets/icons/placeholder-k2-21-boat.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-k2-21-boat-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-k2-21-boat-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-k2-21-boat-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-k2-21-boat-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-k2-21-boat-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-k2-21-boat-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-k2-21-boat-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-k2-21-boat-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-k2-21-boat-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-k2-21-boat-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-k2-22-airplane": {
-    "svg": "assets/icons/placeholder-k2-22-airplane.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-k2-22-airplane-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-k2-22-airplane-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-k2-22-airplane-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-k2-22-airplane-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-k2-22-airplane-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-k2-22-airplane-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-k2-22-airplane-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-k2-22-airplane-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-k2-22-airplane-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-k2-22-airplane-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-k2-23-firetruck": {
-    "svg": "assets/icons/placeholder-k2-23-firetruck.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-k2-23-firetruck-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-k2-23-firetruck-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-k2-23-firetruck-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-k2-23-firetruck-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-k2-23-firetruck-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-k2-23-firetruck-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-k2-23-firetruck-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-k2-23-firetruck-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-k2-23-firetruck-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-k2-23-firetruck-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-k2-24-farm": {
-    "svg": "assets/icons/placeholder-k2-24-farm.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-k2-24-farm-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-k2-24-farm-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-k2-24-farm-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-k2-24-farm-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-k2-24-farm-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-k2-24-farm-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-k2-24-farm-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-k2-24-farm-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-k2-24-farm-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-k2-24-farm-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-k2-25-cow": {
-    "svg": "assets/icons/placeholder-k2-25-cow.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-k2-25-cow-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-k2-25-cow-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-k2-25-cow-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-k2-25-cow-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-k2-25-cow-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-k2-25-cow-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-k2-25-cow-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-k2-25-cow-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-k2-25-cow-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-k2-25-cow-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-k2-26-horse": {
-    "svg": "assets/icons/placeholder-k2-26-horse.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-k2-26-horse-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-k2-26-horse-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-k2-26-horse-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-k2-26-horse-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-k2-26-horse-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-k2-26-horse-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-k2-26-horse-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-k2-26-horse-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-k2-26-horse-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-k2-26-horse-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-k2-27-duck": {
-    "svg": "assets/icons/placeholder-k2-27-duck.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-k2-27-duck-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-k2-27-duck-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-k2-27-duck-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-k2-27-duck-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-k2-27-duck-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-k2-27-duck-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-k2-27-duck-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-k2-27-duck-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-k2-27-duck-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-k2-27-duck-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-k2-28-shoe": {
-    "svg": "assets/icons/placeholder-k2-28-shoe.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-k2-28-shoe-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-k2-28-shoe-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-k2-28-shoe-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-k2-28-shoe-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-k2-28-shoe-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-k2-28-shoe-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-k2-28-shoe-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-k2-28-shoe-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-k2-28-shoe-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-k2-28-shoe-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-k2-29-star": {
-    "svg": "assets/icons/placeholder-k2-29-star.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-k2-29-star-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-k2-29-star-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-k2-29-star-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-k2-29-star-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-k2-29-star-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-k2-29-star-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-k2-29-star-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-k2-29-star-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-k2-29-star-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-k2-29-star-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g35-0-dragon": {
-    "svg": "assets/icons/placeholder-g35-0-dragon.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g35-0-dragon-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g35-0-dragon-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g35-0-dragon-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g35-0-dragon-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g35-0-dragon-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g35-0-dragon-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g35-0-dragon-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g35-0-dragon-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g35-0-dragon-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g35-0-dragon-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g35-1-castle": {
-    "svg": "assets/icons/placeholder-g35-1-castle.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g35-1-castle-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g35-1-castle-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g35-1-castle-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g35-1-castle-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g35-1-castle-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g35-1-castle-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g35-1-castle-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g35-1-castle-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g35-1-castle-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g35-1-castle-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g35-2-treasure-chest": {
-    "svg": "assets/icons/placeholder-g35-2-treasure-chest.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g35-2-treasure-chest-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g35-2-treasure-chest-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g35-2-treasure-chest-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g35-2-treasure-chest-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g35-2-treasure-chest-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g35-2-treasure-chest-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g35-2-treasure-chest-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g35-2-treasure-chest-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g35-2-treasure-chest-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g35-2-treasure-chest-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g35-3-pirate-ship": {
-    "svg": "assets/icons/placeholder-g35-3-pirate-ship.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g35-3-pirate-ship-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g35-3-pirate-ship-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g35-3-pirate-ship-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g35-3-pirate-ship-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g35-3-pirate-ship-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g35-3-pirate-ship-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g35-3-pirate-ship-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g35-3-pirate-ship-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g35-3-pirate-ship-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g35-3-pirate-ship-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g35-4-volcano": {
-    "svg": "assets/icons/placeholder-g35-4-volcano.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g35-4-volcano-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g35-4-volcano-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g35-4-volcano-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g35-4-volcano-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g35-4-volcano-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g35-4-volcano-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g35-4-volcano-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g35-4-volcano-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g35-4-volcano-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g35-4-volcano-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g35-5-cave": {
-    "svg": "assets/icons/placeholder-g35-5-cave.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g35-5-cave-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g35-5-cave-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g35-5-cave-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g35-5-cave-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g35-5-cave-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g35-5-cave-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g35-5-cave-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g35-5-cave-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g35-5-cave-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g35-5-cave-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g35-6-wizard-hat": {
-    "svg": "assets/icons/placeholder-g35-6-wizard-hat.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g35-6-wizard-hat-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g35-6-wizard-hat-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g35-6-wizard-hat-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g35-6-wizard-hat-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g35-6-wizard-hat-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g35-6-wizard-hat-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g35-6-wizard-hat-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g35-6-wizard-hat-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g35-6-wizard-hat-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g35-6-wizard-hat-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g35-7-magic-wand": {
-    "svg": "assets/icons/placeholder-g35-7-magic-wand.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g35-7-magic-wand-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g35-7-magic-wand-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g35-7-magic-wand-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g35-7-magic-wand-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g35-7-magic-wand-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g35-7-magic-wand-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g35-7-magic-wand-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g35-7-magic-wand-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g35-7-magic-wand-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g35-7-magic-wand-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g35-8-map-with-x": {
-    "svg": "assets/icons/placeholder-g35-8-map-with-x.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g35-8-map-with-x-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g35-8-map-with-x-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g35-8-map-with-x-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g35-8-map-with-x-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g35-8-map-with-x-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g35-8-map-with-x-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g35-8-map-with-x-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g35-8-map-with-x-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g35-8-map-with-x-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g35-8-map-with-x-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g35-9-robot": {
-    "svg": "assets/icons/placeholder-g35-9-robot.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g35-9-robot-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g35-9-robot-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g35-9-robot-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g35-9-robot-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g35-9-robot-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g35-9-robot-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g35-9-robot-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g35-9-robot-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g35-9-robot-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g35-9-robot-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g35-10-spaceship": {
-    "svg": "assets/icons/placeholder-g35-10-spaceship.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g35-10-spaceship-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g35-10-spaceship-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g35-10-spaceship-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g35-10-spaceship-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g35-10-spaceship-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g35-10-spaceship-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g35-10-spaceship-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g35-10-spaceship-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g35-10-spaceship-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g35-10-spaceship-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g35-11-alien": {
-    "svg": "assets/icons/placeholder-g35-11-alien.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g35-11-alien-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g35-11-alien-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g35-11-alien-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g35-11-alien-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g35-11-alien-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g35-11-alien-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g35-11-alien-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g35-11-alien-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g35-11-alien-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g35-11-alien-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g35-12-knight": {
-    "svg": "assets/icons/placeholder-g35-12-knight.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g35-12-knight-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g35-12-knight-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g35-12-knight-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g35-12-knight-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g35-12-knight-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g35-12-knight-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g35-12-knight-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g35-12-knight-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g35-12-knight-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g35-12-knight-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g35-13-princess": {
-    "svg": "assets/icons/placeholder-g35-13-princess.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g35-13-princess-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g35-13-princess-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g35-13-princess-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g35-13-princess-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g35-13-princess-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g35-13-princess-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g35-13-princess-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g35-13-princess-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g35-13-princess-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g35-13-princess-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g35-14-crown": {
-    "svg": "assets/icons/placeholder-g35-14-crown.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g35-14-crown-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g35-14-crown-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g35-14-crown-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g35-14-crown-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g35-14-crown-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g35-14-crown-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g35-14-crown-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g35-14-crown-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g35-14-crown-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g35-14-crown-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g35-15-giant": {
-    "svg": "assets/icons/placeholder-g35-15-giant.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g35-15-giant-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g35-15-giant-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g35-15-giant-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g35-15-giant-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g35-15-giant-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g35-15-giant-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g35-15-giant-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g35-15-giant-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g35-15-giant-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g35-15-giant-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g35-16-witchs-broom": {
-    "svg": "assets/icons/placeholder-g35-16-witchs-broom.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g35-16-witchs-broom-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g35-16-witchs-broom-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g35-16-witchs-broom-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g35-16-witchs-broom-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g35-16-witchs-broom-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g35-16-witchs-broom-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g35-16-witchs-broom-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g35-16-witchs-broom-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g35-16-witchs-broom-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g35-16-witchs-broom-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g35-17-potion-bottle": {
-    "svg": "assets/icons/placeholder-g35-17-potion-bottle.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g35-17-potion-bottle-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g35-17-potion-bottle-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g35-17-potion-bottle-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g35-17-potion-bottle-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g35-17-potion-bottle-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g35-17-potion-bottle-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g35-17-potion-bottle-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g35-17-potion-bottle-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g35-17-potion-bottle-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g35-17-potion-bottle-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g35-18-lighthouse": {
-    "svg": "assets/icons/placeholder-g35-18-lighthouse.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g35-18-lighthouse-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g35-18-lighthouse-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g35-18-lighthouse-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g35-18-lighthouse-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g35-18-lighthouse-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g35-18-lighthouse-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g35-18-lighthouse-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g35-18-lighthouse-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g35-18-lighthouse-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g35-18-lighthouse-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g35-19-bridge": {
-    "svg": "assets/icons/placeholder-g35-19-bridge.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g35-19-bridge-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g35-19-bridge-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g35-19-bridge-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g35-19-bridge-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g35-19-bridge-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g35-19-bridge-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g35-19-bridge-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g35-19-bridge-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g35-19-bridge-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g35-19-bridge-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g35-20-storm-cloud": {
-    "svg": "assets/icons/placeholder-g35-20-storm-cloud.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g35-20-storm-cloud-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g35-20-storm-cloud-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g35-20-storm-cloud-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g35-20-storm-cloud-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g35-20-storm-cloud-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g35-20-storm-cloud-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g35-20-storm-cloud-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g35-20-storm-cloud-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g35-20-storm-cloud-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g35-20-storm-cloud-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g35-21-tent": {
-    "svg": "assets/icons/placeholder-g35-21-tent.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g35-21-tent-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g35-21-tent-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g35-21-tent-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g35-21-tent-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g35-21-tent-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g35-21-tent-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g35-21-tent-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g35-21-tent-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g35-21-tent-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g35-21-tent-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g35-22-compass": {
-    "svg": "assets/icons/placeholder-g35-22-compass.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g35-22-compass-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g35-22-compass-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g35-22-compass-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g35-22-compass-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g35-22-compass-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g35-22-compass-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g35-22-compass-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g35-22-compass-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g35-22-compass-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g35-22-compass-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g35-23-locked-treasure-box": {
-    "svg": "assets/icons/placeholder-g35-23-locked-treasure-box.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g35-23-locked-treasure-box-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g35-23-locked-treasure-box-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g35-23-locked-treasure-box-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g35-23-locked-treasure-box-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g35-23-locked-treasure-box-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g35-23-locked-treasure-box-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g35-23-locked-treasure-box-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g35-23-locked-treasure-box-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g35-23-locked-treasure-box-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g35-23-locked-treasure-box-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g35-24-sword": {
-    "svg": "assets/icons/placeholder-g35-24-sword.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g35-24-sword-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g35-24-sword-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g35-24-sword-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g35-24-sword-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g35-24-sword-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g35-24-sword-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g35-24-sword-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g35-24-sword-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g35-24-sword-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g35-24-sword-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g35-25-ice-mountain": {
-    "svg": "assets/icons/placeholder-g35-25-ice-mountain.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g35-25-ice-mountain-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g35-25-ice-mountain-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g35-25-ice-mountain-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g35-25-ice-mountain-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g35-25-ice-mountain-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g35-25-ice-mountain-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g35-25-ice-mountain-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g35-25-ice-mountain-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g35-25-ice-mountain-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g35-25-ice-mountain-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g35-26-desert-with-cactus": {
-    "svg": "assets/icons/placeholder-g35-26-desert-with-cactus.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g35-26-desert-with-cactus-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g35-26-desert-with-cactus-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g35-26-desert-with-cactus-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g35-26-desert-with-cactus-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g35-26-desert-with-cactus-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g35-26-desert-with-cactus-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g35-26-desert-with-cactus-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g35-26-desert-with-cactus-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g35-26-desert-with-cactus-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g35-26-desert-with-cactus-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g35-27-timepiece": {
-    "svg": "assets/icons/placeholder-g35-27-timepiece.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g35-27-timepiece-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g35-27-timepiece-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g35-27-timepiece-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g35-27-timepiece-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g35-27-timepiece-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g35-27-timepiece-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g35-27-timepiece-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g35-27-timepiece-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g35-27-timepiece-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g35-27-timepiece-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g35-28-key": {
-    "svg": "assets/icons/placeholder-g35-28-key.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g35-28-key-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g35-28-key-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g35-28-key-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g35-28-key-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g35-28-key-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g35-28-key-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g35-28-key-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g35-28-key-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g35-28-key-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g35-28-key-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g35-29-talking-animal": {
-    "svg": "assets/icons/placeholder-g35-29-talking-animal.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g35-29-talking-animal-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g35-29-talking-animal-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g35-29-talking-animal-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g35-29-talking-animal-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g35-29-talking-animal-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g35-29-talking-animal-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g35-29-talking-animal-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g35-29-talking-animal-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g35-29-talking-animal-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g35-29-talking-animal-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g68-0-torn-photograph": {
-    "svg": "assets/icons/placeholder-g68-0-torn-photograph.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g68-0-torn-photograph-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g68-0-torn-photograph-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g68-0-torn-photograph-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g68-0-torn-photograph-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g68-0-torn-photograph-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g68-0-torn-photograph-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g68-0-torn-photograph-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g68-0-torn-photograph-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g68-0-torn-photograph-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g68-0-torn-photograph-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g68-1-trail-of-footprints": {
-    "svg": "assets/icons/placeholder-g68-1-trail-of-footprints.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g68-1-trail-of-footprints-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g68-1-trail-of-footprints-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g68-1-trail-of-footprints-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g68-1-trail-of-footprints-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g68-1-trail-of-footprints-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g68-1-trail-of-footprints-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g68-1-trail-of-footprints-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g68-1-trail-of-footprints-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g68-1-trail-of-footprints-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g68-1-trail-of-footprints-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g68-2-broken-sword": {
-    "svg": "assets/icons/placeholder-g68-2-broken-sword.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g68-2-broken-sword-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g68-2-broken-sword-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g68-2-broken-sword-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g68-2-broken-sword-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g68-2-broken-sword-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g68-2-broken-sword-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g68-2-broken-sword-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g68-2-broken-sword-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g68-2-broken-sword-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g68-2-broken-sword-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g68-3-flickering-candle": {
-    "svg": "assets/icons/placeholder-g68-3-flickering-candle.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g68-3-flickering-candle-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g68-3-flickering-candle-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g68-3-flickering-candle-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g68-3-flickering-candle-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g68-3-flickering-candle-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g68-3-flickering-candle-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g68-3-flickering-candle-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g68-3-flickering-candle-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g68-3-flickering-candle-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g68-3-flickering-candle-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g68-4-locked-door": {
-    "svg": "assets/icons/placeholder-g68-4-locked-door.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g68-4-locked-door-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g68-4-locked-door-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g68-4-locked-door-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g68-4-locked-door-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g68-4-locked-door-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g68-4-locked-door-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g68-4-locked-door-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g68-4-locked-door-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g68-4-locked-door-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g68-4-locked-door-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g68-5-mask": {
-    "svg": "assets/icons/placeholder-g68-5-mask.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g68-5-mask-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g68-5-mask-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g68-5-mask-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g68-5-mask-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g68-5-mask-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g68-5-mask-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g68-5-mask-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g68-5-mask-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g68-5-mask-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g68-5-mask-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g68-6-dark-forest": {
-    "svg": "assets/icons/placeholder-g68-6-dark-forest.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g68-6-dark-forest-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g68-6-dark-forest-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g68-6-dark-forest-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g68-6-dark-forest-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g68-6-dark-forest-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g68-6-dark-forest-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g68-6-dark-forest-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g68-6-dark-forest-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g68-6-dark-forest-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g68-6-dark-forest-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g68-7-shadowy-figure": {
-    "svg": "assets/icons/placeholder-g68-7-shadowy-figure.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g68-7-shadowy-figure-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g68-7-shadowy-figure-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g68-7-shadowy-figure-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g68-7-shadowy-figure-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g68-7-shadowy-figure-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g68-7-shadowy-figure-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g68-7-shadowy-figure-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g68-7-shadowy-figure-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g68-7-shadowy-figure-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g68-7-shadowy-figure-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g68-8-cracked-mirror": {
-    "svg": "assets/icons/placeholder-g68-8-cracked-mirror.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g68-8-cracked-mirror-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g68-8-cracked-mirror-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g68-8-cracked-mirror-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g68-8-cracked-mirror-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g68-8-cracked-mirror-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g68-8-cracked-mirror-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g68-8-cracked-mirror-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g68-8-cracked-mirror-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g68-8-cracked-mirror-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g68-8-cracked-mirror-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g68-9-storm-at-sea": {
-    "svg": "assets/icons/placeholder-g68-9-storm-at-sea.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g68-9-storm-at-sea-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g68-9-storm-at-sea-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g68-9-storm-at-sea-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g68-9-storm-at-sea-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g68-9-storm-at-sea-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g68-9-storm-at-sea-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g68-9-storm-at-sea-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g68-9-storm-at-sea-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g68-9-storm-at-sea-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g68-9-storm-at-sea-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g68-10-empty-chair": {
-    "svg": "assets/icons/placeholder-g68-10-empty-chair.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g68-10-empty-chair-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g68-10-empty-chair-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g68-10-empty-chair-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g68-10-empty-chair-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g68-10-empty-chair-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g68-10-empty-chair-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g68-10-empty-chair-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g68-10-empty-chair-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g68-10-empty-chair-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g68-10-empty-chair-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g68-11-secret-letter": {
-    "svg": "assets/icons/placeholder-g68-11-secret-letter.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g68-11-secret-letter-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g68-11-secret-letter-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g68-11-secret-letter-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g68-11-secret-letter-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g68-11-secret-letter-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g68-11-secret-letter-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g68-11-secret-letter-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g68-11-secret-letter-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g68-11-secret-letter-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g68-11-secret-letter-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g68-12-rope-ladder": {
-    "svg": "assets/icons/placeholder-g68-12-rope-ladder.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g68-12-rope-ladder-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g68-12-rope-ladder-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g68-12-rope-ladder-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g68-12-rope-ladder-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g68-12-rope-ladder-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g68-12-rope-ladder-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g68-12-rope-ladder-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g68-12-rope-ladder-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g68-12-rope-ladder-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g68-12-rope-ladder-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g68-13-strange-symbol-on-wall": {
-    "svg": "assets/icons/placeholder-g68-13-strange-symbol-on-wall.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g68-13-strange-symbol-on-wall-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g68-13-strange-symbol-on-wall-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g68-13-strange-symbol-on-wall-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g68-13-strange-symbol-on-wall-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g68-13-strange-symbol-on-wall-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g68-13-strange-symbol-on-wall-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g68-13-strange-symbol-on-wall-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g68-13-strange-symbol-on-wall-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g68-13-strange-symbol-on-wall-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g68-13-strange-symbol-on-wall-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g68-14-abandoned-house": {
-    "svg": "assets/icons/placeholder-g68-14-abandoned-house.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g68-14-abandoned-house-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g68-14-abandoned-house-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g68-14-abandoned-house-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g68-14-abandoned-house-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g68-14-abandoned-house-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g68-14-abandoned-house-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g68-14-abandoned-house-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g68-14-abandoned-house-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g68-14-abandoned-house-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g68-14-abandoned-house-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g68-15-old-key": {
-    "svg": "assets/icons/placeholder-g68-15-old-key.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g68-15-old-key-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g68-15-old-key-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g68-15-old-key-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g68-15-old-key-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g68-15-old-key-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g68-15-old-key-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g68-15-old-key-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g68-15-old-key-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g68-15-old-key-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g68-15-old-key-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g68-16-robot-arm": {
-    "svg": "assets/icons/placeholder-g68-16-robot-arm.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g68-16-robot-arm-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g68-16-robot-arm-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g68-16-robot-arm-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g68-16-robot-arm-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g68-16-robot-arm-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g68-16-robot-arm-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g68-16-robot-arm-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g68-16-robot-arm-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g68-16-robot-arm-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g68-16-robot-arm-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g68-17-spacesuit-helmet": {
-    "svg": "assets/icons/placeholder-g68-17-spacesuit-helmet.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g68-17-spacesuit-helmet-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g68-17-spacesuit-helmet-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g68-17-spacesuit-helmet-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g68-17-spacesuit-helmet-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g68-17-spacesuit-helmet-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g68-17-spacesuit-helmet-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g68-17-spacesuit-helmet-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g68-17-spacesuit-helmet-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g68-17-spacesuit-helmet-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g68-17-spacesuit-helmet-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g68-18-hidden-passageway": {
-    "svg": "assets/icons/placeholder-g68-18-hidden-passageway.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g68-18-hidden-passageway-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g68-18-hidden-passageway-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g68-18-hidden-passageway-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g68-18-hidden-passageway-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g68-18-hidden-passageway-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g68-18-hidden-passageway-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g68-18-hidden-passageway-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g68-18-hidden-passageway-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g68-18-hidden-passageway-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g68-18-hidden-passageway-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g68-19-mysterious-box": {
-    "svg": "assets/icons/placeholder-g68-19-mysterious-box.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g68-19-mysterious-box-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g68-19-mysterious-box-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g68-19-mysterious-box-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g68-19-mysterious-box-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g68-19-mysterious-box-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g68-19-mysterious-box-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g68-19-mysterious-box-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g68-19-mysterious-box-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g68-19-mysterious-box-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g68-19-mysterious-box-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g68-20-hourglass-with-sand-running-out": {
-    "svg": "assets/icons/placeholder-g68-20-hourglass-with-sand-running-out.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g68-20-hourglass-with-sand-running-out-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g68-20-hourglass-with-sand-running-out-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g68-20-hourglass-with-sand-running-out-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g68-20-hourglass-with-sand-running-out-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g68-20-hourglass-with-sand-running-out-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g68-20-hourglass-with-sand-running-out-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g68-20-hourglass-with-sand-running-out-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g68-20-hourglass-with-sand-running-out-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g68-20-hourglass-with-sand-running-out-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g68-20-hourglass-with-sand-running-out-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g68-21-shipwreck": {
-    "svg": "assets/icons/placeholder-g68-21-shipwreck.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g68-21-shipwreck-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g68-21-shipwreck-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g68-21-shipwreck-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g68-21-shipwreck-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g68-21-shipwreck-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g68-21-shipwreck-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g68-21-shipwreck-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g68-21-shipwreck-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g68-21-shipwreck-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g68-21-shipwreck-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g68-22-rusted-gate": {
-    "svg": "assets/icons/placeholder-g68-22-rusted-gate.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g68-22-rusted-gate-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g68-22-rusted-gate-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g68-22-rusted-gate-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g68-22-rusted-gate-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g68-22-rusted-gate-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g68-22-rusted-gate-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g68-22-rusted-gate-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g68-22-rusted-gate-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g68-22-rusted-gate-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g68-22-rusted-gate-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g68-23-lantern": {
-    "svg": "assets/icons/placeholder-g68-23-lantern.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g68-23-lantern-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g68-23-lantern-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g68-23-lantern-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g68-23-lantern-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g68-23-lantern-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g68-23-lantern-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g68-23-lantern-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g68-23-lantern-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g68-23-lantern-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g68-23-lantern-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g68-24-spiderweb": {
-    "svg": "assets/icons/placeholder-g68-24-spiderweb.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g68-24-spiderweb-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g68-24-spiderweb-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g68-24-spiderweb-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g68-24-spiderweb-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g68-24-spiderweb-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g68-24-spiderweb-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g68-24-spiderweb-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g68-24-spiderweb-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g68-24-spiderweb-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g68-24-spiderweb-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g68-25-faded-map": {
-    "svg": "assets/icons/placeholder-g68-25-faded-map.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g68-25-faded-map-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g68-25-faded-map-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g68-25-faded-map-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g68-25-faded-map-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g68-25-faded-map-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g68-25-faded-map-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g68-25-faded-map-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g68-25-faded-map-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g68-25-faded-map-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g68-25-faded-map-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g68-26-broken-bridge": {
-    "svg": "assets/icons/placeholder-g68-26-broken-bridge.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g68-26-broken-bridge-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g68-26-broken-bridge-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g68-26-broken-bridge-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g68-26-broken-bridge-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g68-26-broken-bridge-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g68-26-broken-bridge-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g68-26-broken-bridge-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g68-26-broken-bridge-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g68-26-broken-bridge-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g68-26-broken-bridge-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g68-27-strange-footprints-in-snow": {
-    "svg": "assets/icons/placeholder-g68-27-strange-footprints-in-snow.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g68-27-strange-footprints-in-snow-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g68-27-strange-footprints-in-snow-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g68-27-strange-footprints-in-snow-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g68-27-strange-footprints-in-snow-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g68-27-strange-footprints-in-snow-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g68-27-strange-footprints-in-snow-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g68-27-strange-footprints-in-snow-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g68-27-strange-footprints-in-snow-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g68-27-strange-footprints-in-snow-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g68-27-strange-footprints-in-snow-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g68-28-black-cat-watching": {
-    "svg": "assets/icons/placeholder-g68-28-black-cat-watching.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g68-28-black-cat-watching-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g68-28-black-cat-watching-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g68-28-black-cat-watching-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g68-28-black-cat-watching-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g68-28-black-cat-watching-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g68-28-black-cat-watching-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g68-28-black-cat-watching-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g68-28-black-cat-watching-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g68-28-black-cat-watching-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g68-28-black-cat-watching-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g68-29-discarded-glove": {
-    "svg": "assets/icons/placeholder-g68-29-discarded-glove.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g68-29-discarded-glove-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g68-29-discarded-glove-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g68-29-discarded-glove-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g68-29-discarded-glove-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g68-29-discarded-glove-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g68-29-discarded-glove-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g68-29-discarded-glove-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g68-29-discarded-glove-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g68-29-discarded-glove-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g68-29-discarded-glove-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g912-0-crashed-spaceship-with-tracks-leading-away": {
-    "svg": "assets/icons/placeholder-g912-0-crashed-spaceship-with-tracks-leading-away.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g912-0-crashed-spaceship-with-tracks-leading-away-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g912-0-crashed-spaceship-with-tracks-leading-away-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g912-0-crashed-spaceship-with-tracks-leading-away-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g912-0-crashed-spaceship-with-tracks-leading-away-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g912-0-crashed-spaceship-with-tracks-leading-away-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g912-0-crashed-spaceship-with-tracks-leading-away-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g912-0-crashed-spaceship-with-tracks-leading-away-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g912-0-crashed-spaceship-with-tracks-leading-away-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g912-0-crashed-spaceship-with-tracks-leading-away-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g912-0-crashed-spaceship-with-tracks-leading-away-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g912-1-train-disappearing-into-fog": {
-    "svg": "assets/icons/placeholder-g912-1-train-disappearing-into-fog.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g912-1-train-disappearing-into-fog-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g912-1-train-disappearing-into-fog-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g912-1-train-disappearing-into-fog-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g912-1-train-disappearing-into-fog-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g912-1-train-disappearing-into-fog-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g912-1-train-disappearing-into-fog-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g912-1-train-disappearing-into-fog-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g912-1-train-disappearing-into-fog-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g912-1-train-disappearing-into-fog-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g912-1-train-disappearing-into-fog-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g912-2-abandoned-carnival-ride": {
-    "svg": "assets/icons/placeholder-g912-2-abandoned-carnival-ride.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g912-2-abandoned-carnival-ride-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g912-2-abandoned-carnival-ride-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g912-2-abandoned-carnival-ride-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g912-2-abandoned-carnival-ride-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g912-2-abandoned-carnival-ride-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g912-2-abandoned-carnival-ride-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g912-2-abandoned-carnival-ride-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g912-2-abandoned-carnival-ride-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g912-2-abandoned-carnival-ride-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g912-2-abandoned-carnival-ride-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g912-3-cathedral-ruins-with-vines": {
-    "svg": "assets/icons/placeholder-g912-3-cathedral-ruins-with-vines.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g912-3-cathedral-ruins-with-vines-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g912-3-cathedral-ruins-with-vines-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g912-3-cathedral-ruins-with-vines-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g912-3-cathedral-ruins-with-vines-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g912-3-cathedral-ruins-with-vines-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g912-3-cathedral-ruins-with-vines-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g912-3-cathedral-ruins-with-vines-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g912-3-cathedral-ruins-with-vines-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g912-3-cathedral-ruins-with-vines-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g912-3-cathedral-ruins-with-vines-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g912-4-ancient-book-glowing-faintly": {
-    "svg": "assets/icons/placeholder-g912-4-ancient-book-glowing-faintly.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g912-4-ancient-book-glowing-faintly-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g912-4-ancient-book-glowing-faintly-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g912-4-ancient-book-glowing-faintly-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g912-4-ancient-book-glowing-faintly-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g912-4-ancient-book-glowing-faintly-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g912-4-ancient-book-glowing-faintly-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g912-4-ancient-book-glowing-faintly-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g912-4-ancient-book-glowing-faintly-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g912-4-ancient-book-glowing-faintly-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g912-4-ancient-book-glowing-faintly-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g912-5-lighthouse-beam-cutting-through-storm": {
-    "svg": "assets/icons/placeholder-g912-5-lighthouse-beam-cutting-through-storm.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g912-5-lighthouse-beam-cutting-through-storm-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g912-5-lighthouse-beam-cutting-through-storm-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g912-5-lighthouse-beam-cutting-through-storm-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g912-5-lighthouse-beam-cutting-through-storm-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g912-5-lighthouse-beam-cutting-through-storm-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g912-5-lighthouse-beam-cutting-through-storm-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g912-5-lighthouse-beam-cutting-through-storm-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g912-5-lighthouse-beam-cutting-through-storm-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g912-5-lighthouse-beam-cutting-through-storm-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g912-5-lighthouse-beam-cutting-through-storm-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g912-6-empty-theater-stage": {
-    "svg": "assets/icons/placeholder-g912-6-empty-theater-stage.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g912-6-empty-theater-stage-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g912-6-empty-theater-stage-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g912-6-empty-theater-stage-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g912-6-empty-theater-stage-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g912-6-empty-theater-stage-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g912-6-empty-theater-stage-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g912-6-empty-theater-stage-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g912-6-empty-theater-stage-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g912-6-empty-theater-stage-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g912-6-empty-theater-stage-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g912-7-clock-tower-at-midnight": {
-    "svg": "assets/icons/placeholder-g912-7-clock-tower-at-midnight.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g912-7-clock-tower-at-midnight-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g912-7-clock-tower-at-midnight-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g912-7-clock-tower-at-midnight-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g912-7-clock-tower-at-midnight-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g912-7-clock-tower-at-midnight-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g912-7-clock-tower-at-midnight-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g912-7-clock-tower-at-midnight-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g912-7-clock-tower-at-midnight-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g912-7-clock-tower-at-midnight-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g912-7-clock-tower-at-midnight-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g912-8-shadow-of-a-person-but-no-one-there": {
-    "svg": "assets/icons/placeholder-g912-8-shadow-of-a-person-but-no-one-there.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g912-8-shadow-of-a-person-but-no-one-there-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g912-8-shadow-of-a-person-but-no-one-there-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g912-8-shadow-of-a-person-but-no-one-there-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g912-8-shadow-of-a-person-but-no-one-there-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g912-8-shadow-of-a-person-but-no-one-there-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g912-8-shadow-of-a-person-but-no-one-there-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g912-8-shadow-of-a-person-but-no-one-there-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g912-8-shadow-of-a-person-but-no-one-there-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g912-8-shadow-of-a-person-but-no-one-there-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g912-8-shadow-of-a-person-but-no-one-there-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g912-9-deserted-city-street-at-night": {
-    "svg": "assets/icons/placeholder-g912-9-deserted-city-street-at-night.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g912-9-deserted-city-street-at-night-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g912-9-deserted-city-street-at-night-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g912-9-deserted-city-street-at-night-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g912-9-deserted-city-street-at-night-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g912-9-deserted-city-street-at-night-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g912-9-deserted-city-street-at-night-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g912-9-deserted-city-street-at-night-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g912-9-deserted-city-street-at-night-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g912-9-deserted-city-street-at-night-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g912-9-deserted-city-street-at-night-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g912-10-statue-missing-its-head": {
-    "svg": "assets/icons/placeholder-g912-10-statue-missing-its-head.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g912-10-statue-missing-its-head-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g912-10-statue-missing-its-head-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g912-10-statue-missing-its-head-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g912-10-statue-missing-its-head-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g912-10-statue-missing-its-head-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g912-10-statue-missing-its-head-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g912-10-statue-missing-its-head-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g912-10-statue-missing-its-head-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g912-10-statue-missing-its-head-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g912-10-statue-missing-its-head-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g912-11-blood-red-moon": {
-    "svg": "assets/icons/placeholder-g912-11-blood-red-moon.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g912-11-blood-red-moon-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g912-11-blood-red-moon-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g912-11-blood-red-moon-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g912-11-blood-red-moon-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g912-11-blood-red-moon-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g912-11-blood-red-moon-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g912-11-blood-red-moon-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g912-11-blood-red-moon-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g912-11-blood-red-moon-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g912-11-blood-red-moon-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g912-12-frozen-lake-with-cracks-forming": {
-    "svg": "assets/icons/placeholder-g912-12-frozen-lake-with-cracks-forming.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g912-12-frozen-lake-with-cracks-forming-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g912-12-frozen-lake-with-cracks-forming-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g912-12-frozen-lake-with-cracks-forming-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g912-12-frozen-lake-with-cracks-forming-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g912-12-frozen-lake-with-cracks-forming-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g912-12-frozen-lake-with-cracks-forming-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g912-12-frozen-lake-with-cracks-forming-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g912-12-frozen-lake-with-cracks-forming-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g912-12-frozen-lake-with-cracks-forming-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g912-12-frozen-lake-with-cracks-forming-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g912-13-bridge-leading-to-nowhere": {
-    "svg": "assets/icons/placeholder-g912-13-bridge-leading-to-nowhere.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g912-13-bridge-leading-to-nowhere-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g912-13-bridge-leading-to-nowhere-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g912-13-bridge-leading-to-nowhere-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g912-13-bridge-leading-to-nowhere-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g912-13-bridge-leading-to-nowhere-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g912-13-bridge-leading-to-nowhere-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g912-13-bridge-leading-to-nowhere-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g912-13-bridge-leading-to-nowhere-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g912-13-bridge-leading-to-nowhere-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g912-13-bridge-leading-to-nowhere-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g912-14-old-photograph-half-burned": {
-    "svg": "assets/icons/placeholder-g912-14-old-photograph-half-burned.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g912-14-old-photograph-half-burned-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g912-14-old-photograph-half-burned-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g912-14-old-photograph-half-burned-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g912-14-old-photograph-half-burned-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g912-14-old-photograph-half-burned-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g912-14-old-photograph-half-burned-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g912-14-old-photograph-half-burned-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g912-14-old-photograph-half-burned-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g912-14-old-photograph-half-burned-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g912-14-old-photograph-half-burned-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g912-15-chessboard-mid-game": {
-    "svg": "assets/icons/placeholder-g912-15-chessboard-mid-game.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g912-15-chessboard-mid-game-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g912-15-chessboard-mid-game-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g912-15-chessboard-mid-game-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g912-15-chessboard-mid-game-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g912-15-chessboard-mid-game-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g912-15-chessboard-mid-game-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g912-15-chessboard-mid-game-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g912-15-chessboard-mid-game-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g912-15-chessboard-mid-game-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g912-15-chessboard-mid-game-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g912-16-mask-cracked-in-half": {
-    "svg": "assets/icons/placeholder-g912-16-mask-cracked-in-half.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g912-16-mask-cracked-in-half-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g912-16-mask-cracked-in-half-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g912-16-mask-cracked-in-half-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g912-16-mask-cracked-in-half-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g912-16-mask-cracked-in-half-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g912-16-mask-cracked-in-half-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g912-16-mask-cracked-in-half-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g912-16-mask-cracked-in-half-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g912-16-mask-cracked-in-half-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g912-16-mask-cracked-in-half-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g912-17-broken-stained-glass-window": {
-    "svg": "assets/icons/placeholder-g912-17-broken-stained-glass-window.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g912-17-broken-stained-glass-window-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g912-17-broken-stained-glass-window-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g912-17-broken-stained-glass-window-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g912-17-broken-stained-glass-window-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g912-17-broken-stained-glass-window-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g912-17-broken-stained-glass-window-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g912-17-broken-stained-glass-window-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g912-17-broken-stained-glass-window-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g912-17-broken-stained-glass-window-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g912-17-broken-stained-glass-window-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g912-18-crows-circling-a-barren-tree": {
-    "svg": "assets/icons/placeholder-g912-18-crows-circling-a-barren-tree.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g912-18-crows-circling-a-barren-tree-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g912-18-crows-circling-a-barren-tree-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g912-18-crows-circling-a-barren-tree-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g912-18-crows-circling-a-barren-tree-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g912-18-crows-circling-a-barren-tree-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g912-18-crows-circling-a-barren-tree-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g912-18-crows-circling-a-barren-tree-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g912-18-crows-circling-a-barren-tree-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g912-18-crows-circling-a-barren-tree-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g912-18-crows-circling-a-barren-tree-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g912-19-abandoned-school-hallway": {
-    "svg": "assets/icons/placeholder-g912-19-abandoned-school-hallway.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g912-19-abandoned-school-hallway-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g912-19-abandoned-school-hallway-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g912-19-abandoned-school-hallway-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g912-19-abandoned-school-hallway-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g912-19-abandoned-school-hallway-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g912-19-abandoned-school-hallway-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g912-19-abandoned-school-hallway-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g912-19-abandoned-school-hallway-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g912-19-abandoned-school-hallway-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g912-19-abandoned-school-hallway-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g912-20-spiral-staircase-vanishing-into-darkness": {
-    "svg": "assets/icons/placeholder-g912-20-spiral-staircase-vanishing-into-darkness.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g912-20-spiral-staircase-vanishing-into-darkness-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g912-20-spiral-staircase-vanishing-into-darkness-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g912-20-spiral-staircase-vanishing-into-darkness-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g912-20-spiral-staircase-vanishing-into-darkness-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g912-20-spiral-staircase-vanishing-into-darkness-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g912-20-spiral-staircase-vanishing-into-darkness-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g912-20-spiral-staircase-vanishing-into-darkness-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g912-20-spiral-staircase-vanishing-into-darkness-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g912-20-spiral-staircase-vanishing-into-darkness-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g912-20-spiral-staircase-vanishing-into-darkness-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g912-21-suitcase-left-in-the-middle-of-a-road": {
-    "svg": "assets/icons/placeholder-g912-21-suitcase-left-in-the-middle-of-a-road.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g912-21-suitcase-left-in-the-middle-of-a-road-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g912-21-suitcase-left-in-the-middle-of-a-road-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g912-21-suitcase-left-in-the-middle-of-a-road-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g912-21-suitcase-left-in-the-middle-of-a-road-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g912-21-suitcase-left-in-the-middle-of-a-road-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g912-21-suitcase-left-in-the-middle-of-a-road-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g912-21-suitcase-left-in-the-middle-of-a-road-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g912-21-suitcase-left-in-the-middle-of-a-road-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g912-21-suitcase-left-in-the-middle-of-a-road-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g912-21-suitcase-left-in-the-middle-of-a-road-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g912-22-overgrown-garden-with-forgotten-fountain": {
-    "svg": "assets/icons/placeholder-g912-22-overgrown-garden-with-forgotten-fountain.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g912-22-overgrown-garden-with-forgotten-fountain-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g912-22-overgrown-garden-with-forgotten-fountain-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g912-22-overgrown-garden-with-forgotten-fountain-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g912-22-overgrown-garden-with-forgotten-fountain-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g912-22-overgrown-garden-with-forgotten-fountain-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g912-22-overgrown-garden-with-forgotten-fountain-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g912-22-overgrown-garden-with-forgotten-fountain-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g912-22-overgrown-garden-with-forgotten-fountain-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g912-22-overgrown-garden-with-forgotten-fountain-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g912-22-overgrown-garden-with-forgotten-fountain-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g912-23-torn-flag-waving": {
-    "svg": "assets/icons/placeholder-g912-23-torn-flag-waving.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g912-23-torn-flag-waving-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g912-23-torn-flag-waving-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g912-23-torn-flag-waving-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g912-23-torn-flag-waving-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g912-23-torn-flag-waving-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g912-23-torn-flag-waving-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g912-23-torn-flag-waving-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g912-23-torn-flag-waving-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g912-23-torn-flag-waving-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g912-23-torn-flag-waving-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g912-24-key-glowing-faintly-in-the-dark": {
-    "svg": "assets/icons/placeholder-g912-24-key-glowing-faintly-in-the-dark.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g912-24-key-glowing-faintly-in-the-dark-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g912-24-key-glowing-faintly-in-the-dark-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g912-24-key-glowing-faintly-in-the-dark-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g912-24-key-glowing-faintly-in-the-dark-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g912-24-key-glowing-faintly-in-the-dark-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g912-24-key-glowing-faintly-in-the-dark-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g912-24-key-glowing-faintly-in-the-dark-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g912-24-key-glowing-faintly-in-the-dark-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g912-24-key-glowing-faintly-in-the-dark-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g912-24-key-glowing-faintly-in-the-dark-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g912-25-candle-flickering-in-a-cavern": {
-    "svg": "assets/icons/placeholder-g912-25-candle-flickering-in-a-cavern.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g912-25-candle-flickering-in-a-cavern-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g912-25-candle-flickering-in-a-cavern-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g912-25-candle-flickering-in-a-cavern-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g912-25-candle-flickering-in-a-cavern-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g912-25-candle-flickering-in-a-cavern-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g912-25-candle-flickering-in-a-cavern-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g912-25-candle-flickering-in-a-cavern-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g912-25-candle-flickering-in-a-cavern-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g912-25-candle-flickering-in-a-cavern-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g912-25-candle-flickering-in-a-cavern-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g912-26-giant-shadow-cast-on-a-wall": {
-    "svg": "assets/icons/placeholder-g912-26-giant-shadow-cast-on-a-wall.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g912-26-giant-shadow-cast-on-a-wall-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g912-26-giant-shadow-cast-on-a-wall-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g912-26-giant-shadow-cast-on-a-wall-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g912-26-giant-shadow-cast-on-a-wall-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g912-26-giant-shadow-cast-on-a-wall-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g912-26-giant-shadow-cast-on-a-wall-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g912-26-giant-shadow-cast-on-a-wall-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g912-26-giant-shadow-cast-on-a-wall-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g912-26-giant-shadow-cast-on-a-wall-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g912-26-giant-shadow-cast-on-a-wall-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g912-27-portal-opening-in-the-sky": {
-    "svg": "assets/icons/placeholder-g912-27-portal-opening-in-the-sky.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g912-27-portal-opening-in-the-sky-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g912-27-portal-opening-in-the-sky-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g912-27-portal-opening-in-the-sky-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g912-27-portal-opening-in-the-sky-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g912-27-portal-opening-in-the-sky-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g912-27-portal-opening-in-the-sky-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g912-27-portal-opening-in-the-sky-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g912-27-portal-opening-in-the-sky-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g912-27-portal-opening-in-the-sky-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g912-27-portal-opening-in-the-sky-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g912-28-ship-stranded-on-dry-land": {
-    "svg": "assets/icons/placeholder-g912-28-ship-stranded-on-dry-land.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g912-28-ship-stranded-on-dry-land-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g912-28-ship-stranded-on-dry-land-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g912-28-ship-stranded-on-dry-land-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g912-28-ship-stranded-on-dry-land-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g912-28-ship-stranded-on-dry-land-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g912-28-ship-stranded-on-dry-land-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g912-28-ship-stranded-on-dry-land-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g912-28-ship-stranded-on-dry-land-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g912-28-ship-stranded-on-dry-land-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g912-28-ship-stranded-on-dry-land-1024.png",
+        "width": 1024
+      }
+    ]
   },
   "placeholder-g912-29-writing-on-a-wall-that-no-one-understands": {
-    "svg": "assets/icons/placeholder-g912-29-writing-on-a-wall-that-no-one-understands.svg"
+    "webp": [
+      {
+        "path": "assets/raster/placeholder-g912-29-writing-on-a-wall-that-no-one-understands-64.webp",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g912-29-writing-on-a-wall-that-no-one-understands-128.webp",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g912-29-writing-on-a-wall-that-no-one-understands-256.webp",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g912-29-writing-on-a-wall-that-no-one-understands-512.webp",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g912-29-writing-on-a-wall-that-no-one-understands-1024.webp",
+        "width": 1024
+      }
+    ],
+    "png": [
+      {
+        "path": "assets/raster/placeholder-g912-29-writing-on-a-wall-that-no-one-understands-64.png",
+        "width": 64
+      },
+      {
+        "path": "assets/raster/placeholder-g912-29-writing-on-a-wall-that-no-one-understands-128.png",
+        "width": 128
+      },
+      {
+        "path": "assets/raster/placeholder-g912-29-writing-on-a-wall-that-no-one-understands-256.png",
+        "width": 256
+      },
+      {
+        "path": "assets/raster/placeholder-g912-29-writing-on-a-wall-that-no-one-understands-512.png",
+        "width": 512
+      },
+      {
+        "path": "assets/raster/placeholder-g912-29-writing-on-a-wall-that-no-one-understands-1024.png",
+        "width": 1024
+      }
+    ]
   }
 }
