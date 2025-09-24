@@ -56,6 +56,23 @@ select{padding:8px;border-radius:8px;border:1px solid #eee;background:#fff}
 .die .face{width:86%;height:86%;background:#fff;border-radius:12px;display:flex;align-items:center;justify-content:center;padding:6px}
 .die img{width:86%;height:86%;object-fit:contain}
 
+/* Kept dice visual state: user clicked to keep this die */
+.die.kept{outline:4px solid rgba(34,124,226,0.18);transform:translateY(-6px);}
+.die.kept .face{box-shadow:inset 0 0 0 4px rgba(34,124,226,0.06)}
+
+.btn.reroll{background:#1f8ceb}
+
+/* Make dice keyboard-focusable and show focus outline */
+.die{cursor:pointer}
+.die:focus{outline:3px solid rgba(34,124,226,0.9);outline-offset:3px}
+.die[role="button"]{cursor:pointer}
+
+/* Helper note shown after first roll */
+#roll-helper{margin-top:10px;display:block}
+
+/* Screen-reader only utility */
+.sr-only{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap;border:0;padding:0;margin:-1px}
+
 /* Responsive rows: default 2 rows; small screens 1 row (stack vertically), wide screens 3 rows */
 @media (max-width:520px){
   .dice-area{grid-template-rows:repeat(1,1fr);grid-auto-flow:row;}
@@ -69,8 +86,9 @@ select{padding:8px;border-radius:8px;border:1px solid #eee;background:#fff}
 /* Optional horizontal layout (opt-in). Apply the class `horizontal` to #dice-area to enable */
 .dice-area.horizontal{
   grid-auto-flow:row; /* flow left-to-right */
-  grid-template-rows:repeat(2,1fr);
+  grid-template-rows:repeat(1,1fr); /* single row when horizontal */
   grid-auto-columns:minmax(96px,1fr);
+  align-items:center;
 }
 .die svg{width:64px;height:64px;filter:drop-shadow(0 6px 6px rgba(0,0,0,0.06))}
 .die.spin{animation:spin 700ms ease-in-out}
